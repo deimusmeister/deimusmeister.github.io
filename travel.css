@@ -1,0 +1,374 @@
+linken{ /* bug fix */
+	display: block;
+}
+
+.debug *{
+	background:#e1e1e1;
+}
+
+.clearfix{
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+/*menu*/
+ul.menu{
+	padding:0;
+	margin-left:15px;
+	margin-bottom:13px;
+}
+ul.menu li{
+    display:inline;
+    vertical-align:top;
+    position:relative;
+	margin-right:0.5em;
+}
+
+/*inactive*/
+.columns .inactive, .block-trips-by-country .inactive, .menu .inactive, .block-country-city-header.inactive{
+	color:#c3c3c3;
+}
+
+/*main table common*/
+
+.main-table{
+	width:77%;
+}
+.main-table td:first-child{
+	padding-top:0;
+}
+h1 + .main-table{
+	padding-top:15px;
+}
+.main-table-tab{
+	margin-right:0.5em;
+}
+.city-with-tabs{
+	margin-bottom:0.5em !important;
+}
+.city-tabs{
+	margin-left:4em;
+	margin-bottom:1em;
+	margin-top:0.5em;
+}
+
+.block-trips-by-country{
+	width:100% !important;
+}
+
+/*blocks*/
+
+.block-country-city{
+margin-top:1em;
+line-height:160%;
+}
+
+.block-country-city-header{
+	font-weight:bold;
+}
+.block-trips-by-country-visited .inactive{
+	color:black;
+}
+
+/*tabs*/
+.tabs{
+	font-size:85%;
+	line-height:160%;
+	margin:0 0 1.5em 0;
+}
+.tabs span{
+	margin-right:0.5em;
+}
+
+td div.tabs:first-child{
+	margin: 1em 0 0 0;
+}
+
+.tabs .tab-group-header{
+	font-weight:bold;
+	white-space:nowrap;
+	margin-right:0.5em;
+}
+span.tab-group{
+	margin-right:0.75em;
+}
+
+/*fix*/
+td .fix-year-trip-list:first-child{
+	margin-top:0;
+}
+.main-table-no-padding td{
+	padding-left:0;
+}
+.main-table-no-top-padding{
+	padding-top:0 !important;
+}
+
+/*columns*/
+.columns .list{
+	margin-left:0;
+}
+.columns{
+	width:100%;
+	margin-top:1em;
+	padding-bottom:2em;
+	white-space:nowrap;	
+}
+.cols-5{
+	-moz-column-count:5;
+	-webkit-column-count:5;	
+	/*column-count:5;*/
+	-moz-column-width:15em;
+	-webkit-column-width:15em;
+	column-width:15em;
+}
+.cols-4{
+	width:1400px;
+	-moz-column-count:4;
+	-webkit-column-count:4;	
+	/*column-count:5;*/
+	-moz-column-width:15em;
+	-webkit-column-width:15em;
+	column-width:15em;
+}
+.cols-3{
+	width:1100px;
+	-moz-column-count:3;
+	-webkit-column-count:3;	
+	/*column-count:5;*/
+	-moz-column-width:15em;
+	-webkit-column-width:15em;
+	column-width:15em;
+}
+.cols-2{
+	width:680px;
+	-moz-column-count:2;
+	-webkit-column-count:2;	
+	/*column-count:5;*/
+	-moz-column-width:15em;
+	-webkit-column-width:15em;
+	column-width:15em;
+}
+.classis{
+	font-weight:bold;
+	position:absolute;
+}
+.cols-content{
+	line-height: 130%;
+	white-space: normal;
+	padding-left:1.75em;
+	display:block;
+}
+.columns div.list{
+	position:relative;
+	margin-bottom:0;
+	-webkit-column-break-inside: avoid;
+	page-break-inside: avoid;
+	break-inside: avoid;
+	padding-bottom: 1.5em;
+}
+
+/*РєР»Р°СЃРёС„РёРєР°С‚РѕСЂ РІ РѕР±С‹С‡РЅРѕРј СЃРїРёСЃРєРµ*/
+.p-double-margin{
+	margin-left:3.5em;
+	position:relative;
+}
+
+.classis-in-p{
+	font-weight:bold;
+	position:absolute;
+	left:-3.5em;
+}
+
+/* search */
+form.search { 
+	margin: 0; 
+	padding: 5px; 
+}
+
+form.search input{ 
+	width:80%; 
+	font-size:85%; 
+	height: 1.5em; 
+	background-image: url('/search/search-icon-white2.png');
+	background-repeat: no-repeat;
+	background-position: 4px 60%;
+	background-color: #555;
+	border: 0; 
+	padding-left: 20px; 
+	border-radius: 15px;
+	outline: none;
+	-moz-border-radius: 16px; 
+	-webkit-border-radius: 16px;
+	white-space: nowrap; 
+	margin: 0;
+	color: #cdcdcd;
+	-webkit-transition: background 0.5s ease;
+	-moz-transition: background 0.5s ease;
+	-ms-transition: background 0.5s ease;
+	-o-transition: background-color 0.5s ease-in;
+}
+	
+form.search input:focus { 
+	background-image: url('/search/search-icon-grey2.png');
+	background-repeat: no-repeat;
+	background-position: 4px 60%;
+	background-color: #fff;
+	color: black;
+	-webkit-transition: background 0.5s ease;
+	-moz-transition: background 0.5s ease;
+	-ms-transition: background 0.5s ease;
+	-o-transition: background-color 0.5s ease-in;
+}
+
+/* end search */
+
+/*depr*/
+ul.menu .submenu{
+	position:absolute;
+	top:2em;
+	left:0;
+	white-space:nowrap;
+	margin:0;
+	padding:0;
+}
+
+/* 5 РєРѕР»РѕРЅРѕРє РґР»СЏ РіРѕСЂРѕРґРѕРІ */
+.trip-by-city-block{
+	width:100%;
+}
+.cols{
+	-moz-column-count:5;
+	-moz-column-width:150px;
+	-webkit-column-count:5;
+	-webkit-column-width:150px;
+	-webkit-column-gap:2em;
+	column-count:5;
+	width:100%;
+	margin-top:1.5em;
+	padding-bottom:2em;	
+}
+.td-cols-fix{
+#	padding-right:150px;
+}
+.cols .subtitle:first-child{
+	margin-top:0;
+}
+
+.fix-left-margin{
+	position:relative;
+}
+
+.w100{
+	width:100%;
+}
+
+/* РєР°СЂС‚Р° */
+h1.main_title,
+h2.title,
+h2.subtitle{
+	/*float: left;*/
+	display:inline-block;
+	width: auto;
+}
+
+h2.subtitle{
+	display: block;
+}
+
+.map{
+	width: calc(100% + 32px);
+	margin-left: -16px;
+	overflow: hidden
+}
+
+.map-sizer {
+  margin-bottom:0.9375em;
+}
+
+.map-canvas{
+	display: none;
+	height: 300px;
+	margin: 0.5em 0 2em;
+}
+
+.map-link{
+	display: inline-block;
+	border-radius: 3px;
+	background: #72acdd;
+	padding: 1px 8px 2px;
+	cursor: pointer;
+	height: 20px;
+	
+	margin-left: 14px;
+	
+	/* nonselectable */
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: -moz-none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+h1 + .map-link{
+	margin-top: 27px;
+	position: relative;
+	top:-2px;
+}
+
+h2 + .map-link{
+	margin-top: 20px;
+}
+
+.map-link:before{
+	content: '';
+	display: inline-block;
+	width: 10px;
+	height: 15px;
+	background-image: url('placemark.png');
+	margin-right: 1px;
+	position: relative;
+	top: 3px;
+}
+
+.map-link > .pseudo,
+.map-link > .pseudo:hover{
+	display: inline-block;
+	line-height: 1;
+	color: rgba(255,255,255,1) !important;
+	border-bottom: 1px dashed rgba(255,255,255,.8) !important;
+}
+
+.map-link:hover > .pseudo,
+.map-link:hover > .pseudo:hover {
+	color: rgba(255,255,255,.8) !important;
+	border-color: rgba(255,255,255,.8) !important;
+}
+
+.td-cols-fix{
+	position: relative
+}
+.show-me{
+	display: none
+}
+.application-block .show-me{
+	display: block;
+	position: absolute;
+	left: 45%;
+	top: 320px;
+	z-index: 200;
+	text-align: center;
+	width: 200px;
+}
+.show-me p {margin-top: 0.5em}
+
+
+.map-marker-label, .ext-marker-label {
+	background: rgba(0,0,0,0.5);
+	color: #fff;
+	padding: 1px 3px;
+	border-radius: 2px;
+	margin-top: 3px;
+}

@@ -1,0 +1,98 @@
+/* links with border underline */
+.underline {
+	text-decoration: none;
+	border-bottom: 1px solid;
+}
+
+a:link{
+/*	color:#05C; */
+color: #008ace;
+}
+a:link.underline {
+	border-color: #b2ccf0;
+}
+
+a:visited{
+/*	color:#909; */
+color: #b40eb4;
+}
+a:visited.underline {
+	border-color: #e0b2e0;
+}
+
+a:visited:hover{
+	color: #C00;
+}
+a:hover{
+	color: #C00 !important;
+}
+a:hover.underline {
+	border-color: #f0b2b2 !important;
+}
+
+a.gray{
+	color: #999;
+	border-color: #cfcfcf !important;
+}
+
+a.white{
+	color: #EBEBEB;
+	border-color: #B3B3B3 !important;
+}
+a.white:hover{
+	color: #FFFFFF !important;
+}
+a.white:hover{
+	border-color: #8f0000 !important;
+	border-color: #bfbfbf !important;
+}
+
+/* LINKS */
+.pseudo:visited{
+border-color: #B2CCF0 !important;
+color: #05C;
+}
+.pseudo:hover{
+border-color: #F0B2B2 !important;
+color: #C00 !important;
+}
+.pseudo {
+border-bottom-style: dashed;
+cursor: pointer;
+}
+
+/*crea-gif*/
+a.black{
+	color: #000000;
+	border-color: #4c4c4c !important;
+}
+a.black font:hover{
+	color: #C00 !important;
+}
+
+
+
+/*breadcrubm*/
+
+.breadcrumb a{
+	color: #ebebeb !important;
+}
+.breadcrumb a:hover{
+	color: #FFFFFF !important;
+}
+
+.header a:link.underline{
+	border-color: #b3b3b3 !important;
+}
+.header a:visited.underline{
+	border-color: #b3b3b3 !important;
+}
+
+.header a:hover.underline{
+	border-color: #bfbfbf !important;
+}
+
+/* language switcher (top right conner) */
+.lang-switcher a{
+	color: #FFFFFF !important;
+}

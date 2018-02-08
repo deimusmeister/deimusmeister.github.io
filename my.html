@@ -1,0 +1,645 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Expeditions Map</title>
+
+        <link rel="stylesheet" href="./ammap/ammap.css" type="text/css">
+        <script src="./ammap/ammap.js" type="text/javascript"></script>
+        <!-- map file should be included after ammap.js -->
+		<script src="./ammap/maps/js/worldHigh.js" type="text/javascript"></script>
+        <script>
+			var map;
+
+			AmCharts.ready(function() {
+			    map = new AmCharts.AmMap();
+
+
+			    var dataProvider = {
+			        mapVar: AmCharts.maps.worldHigh,
+			        //zoomLevel: 0.5,
+			        //zoomLongitude: 10,
+			        //zoomLatitude: 52
+			    };
+
+                
+			    map.areasSettings = {
+                    color: "#EDAFB0",
+			        unlistedAreasColor: "#FFFFFF",
+                    unlistedAreasOutlineColor: "#272C2F",
+                    outlineColor: "#272C2F",
+                    outlineThickness: 0.5,
+			        rollOverOutlineColor: "#272C2F",
+			        rollOverColor: "#CC0000",
+			        balloonText: "[[title]] visited in [[customData]]"
+			    };
+
+			    map.creditsPosition = "top-right";
+                
+                map.dragMap = false;
+                map.zoomOnDoubleClick = false;
+                map.zoomControl = {
+                    zoomControlEnabled: false,
+                    panControlEnabled: false,
+                    homeButtonEnabled: false
+                };
+
+
+			    dataProvider.areas = [
+                {
+                    title: "Armenia",
+                    id: "AM",
+                    customData: "1987 (born :) )"},
+                {
+			        title: "Russia",
+			        id: "RU",
+			        customData: "2009"},
+			    {
+			        title: "Georgia",
+			        id: "GE",
+			        customData: "2009"},
+			    {
+			        title: "Germany",
+			        id: "DE",
+			        customData: "2010"},
+			    {
+			        title: "Austria",
+			        id: "AT",
+			        customData: "2010"},
+                {
+                    title: "Netherlands",
+                    id: "NL",
+                    customData: "2010"},
+                {
+                    title: "France",
+                    id: "FR",
+                    customData: "2010"},
+			    {
+			        title: "Italy",
+			        id: "IT",
+			        customData: "2010"},
+                {
+                    title: "Czechia (Czech Republic)",
+                    id: "CZ",
+                    customData: "2010"},
+			    {
+			        title: "United Arab Emirates",
+			        id: "AE",
+			        customData: "2010"},
+                {
+                    title: "Hungary",
+                    id: "HU",
+                    customData: "2011"},
+			    {
+			        title: "Switzerland",
+			        id: "CH",
+			        customData: "2011"},
+			    {
+			        title: "Spain",
+			        id: "ES",
+			        customData: "2011"},
+			    {
+			        title: "United Kingdom",
+			        id: "GB",
+			        customData: "2012"},
+                {
+                    title: "Belgium",
+                    id: "BE",
+                    customData: "2012"},
+			    {
+			        title: "China",
+			        id: "CN",
+			        customData: "2012"},
+			    {
+			        title: "Poland",
+			        id: "PL",
+			        customData: "2013"},
+			    {
+			        title: "Japan",
+			        id: "JP",
+			        customData: "2014"},
+                {
+                    title: "Slovakia",
+                    id: "SK",
+                    customData: "2014"},
+                {
+                    title: "Slovenia",
+                    id: "SI",
+                    customData: "2015"},
+                {
+                    title: "Croatia",
+                    id: "HR",
+                    customData: "2015"},
+                {
+                    title: "Greece",
+                    id: "GR",
+                    customData: "2015"},
+                {
+                    title: "Liechtenstein",
+                    id: "LI",
+                    customData: "2015"},
+                {
+                    title: "United States",
+                    id: "US",
+                    customData: "2015"},
+			    {
+			        title: "Latvia",
+			        id: "LV",
+			        customData: "2016"},
+			    {
+			        title: "Lithuania",
+			        id: "LT",
+			        customData: "2016"},
+			    {
+			        title: "Luxembourg",
+			        id: "LU",
+			        customData: "2016"},
+                {
+                    title: "Thailand",
+                    id: "TH",
+                    customData: "2016"},
+                {
+                    title: "Vietnam",
+                    id: "VN",
+                    customData: "2016"},
+			    {
+			        title: "Malta",
+			        id: "MT",
+			        customData: "2017"},
+			    {
+			        title: "Portugal",
+			        id: "PT",
+			        customData: "2017"},
+                {
+                    title: "Singapore",
+                    id: "SG",
+                    customData: "2017"},
+                {
+                    title: "Malaysia",
+                    id: "MY",
+                    customData: "2017"},
+                {
+                    title: "Indonesia",
+                    id: "ID",
+                    customData: "2017"},
+			    {
+			        title: "Ireland",
+			        id: "IE",
+			        customData: "2017"},
+			    {
+			        title: "Andorra",
+			        id: "AD",
+			        customData: "2017"},
+			    {
+			        title: "San Marino",
+			        id: "SMR",
+			        customData: "2017"},
+                {
+                    title: "Ukraine",
+                    id: "UA",
+                    customData: "2017"}
+                    
+			    ];
+
+			    map.dataProvider = dataProvider;
+
+			    var legend = {
+			        width: 600,
+			        backgroundAlpha: 0.5,
+			        backgroundColor: "#FFFFFF",
+			        borderColor: "#666666",
+			        borderAlpha: 1,
+			        bottom: 15,
+			        left: 15,
+			        horizontalGap: 10,
+			        data: [
+			            {
+			            title: "Joined EU before 2004",
+			            color: "#3366CC"},
+			        {
+			            title: "Joined EU at 2004",
+			            color: "#FFCC33"},
+			        {
+			            title: "Joined EU at 2007",
+			            color: "#66CC99"}
+			        ]
+			    };
+
+			    //map.addLegend(legend);
+			    map.write("mapdiv");
+
+			});
+
+        </script>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="stylesheet" type="text/css" href="links.css">
+        <link rel="stylesheet" type="text/css" href="travel.css">
+    </head>
+
+    <body>
+    
+    	<div style="margin-left:15px; margin-top:15px; margin-bottom:25px">
+			<h1 lang="en" style="" class="main_title">Expeditions Map</h1>
+		</div>
+    
+        <div id="mapdiv" style="width: 99%; background-color:#c4efff; height: 700px; border: 0.5px solid #000; border-radius: 5px; -moz-border-radius: 5px;"></div>
+        
+		<table class="main-table" cellpadding="15">
+		   <tbody>
+		      <tr>
+		         <td>
+		            <div lang="en">
+		               <ol class="block-country-city">
+		                  <li>
+		                     <p class="body">
+		                        <span class="block-country-city-header">
+		                        <!-- 
+		                        <a href="./soon/index.html" class="underline">Armenia</a>:
+		                        </span>
+		                        <a href="./soon/index.html#gagry" class="underline">Gyumri</a>,
+		                        <a href="./soon/index.html#gudauta" class="underline">Yerevan</a>
+		                        -->
+								Armenia:
+		                        </span>
+								Gyumri,
+		                        Yerevan
+		                     </p>
+		                  </li>
+						  <li>
+						     <p class="body">
+						        <span class="block-country-city-header">
+						        Russia
+						        </span>
+						        Moscow,
+						        Dimitrov
+						     </p>
+						  </li>
+						  <li>
+						     <p class="body">
+						        <span class="block-country-city-header">
+						        Georgia
+						        </span>
+						        Tbilisi,
+						        Sighnaghi,
+						        Mtskheta
+						     </p>
+						  </li>
+						  <li>
+						     <p class="body">
+						        <span class="block-country-city-header">
+						        Germany
+						        </span>
+						     </p>
+						  </li>
+						  <li>
+						     <p class="body">
+						        <span class="block-country-city-header">
+						        Austria
+						        </span>
+						        Vienna,
+						        Salzbourg,
+						        Linz,
+						        Innsbruck,
+						        Ischgl
+						     </p>
+						  </li>
+						  <li>
+						     <p class="body">
+						        <span class="block-country-city-header">
+						        Netherlands
+						        </span>
+						        Amsterdam
+						     </p>
+						  </li>
+						  <li>
+						     <p class="body">
+						        <span class="block-country-city-header">
+						        France
+						        </span>
+						        Paris,
+						        Saint-Genis-Pouilly
+						     </p>
+						  </li>
+						  <li>
+						     <p class="body">
+						        <span class="block-country-city-header">
+						    	Italy
+						        </span>
+						        Rome,
+						        Milan,
+						        Turin,
+						        Verona,
+						        Bologna,
+						        Genoa,
+						        Portofino,
+						        Florence,
+						        Pisa,
+						        Maranello,
+						        Sant'Agata Bolognese,
+						        Venice,
+						        Padua,
+						        Bergamo,
+						        Brescia						        
+						     </p>
+						  </li>
+						  <li>
+						     <p class="body">
+						        <span class="block-country-city-header">
+						        Czechia (Czech Republic)
+						        </span>
+						        Prague,
+						        Pilsen,
+						        České Budějovice,
+						        Český Krumlov
+						     </p>
+						  </li>
+						  <li>
+						     <p class="body">
+						        <span class="block-country-city-header">
+						        United Arab Emirates
+						        </span>
+						        Dubai
+						     </p>
+						  </li>
+						  <li>
+						     <p class="body">
+						        <span class="block-country-city-header">
+						        Hungary
+						        </span>
+						        Budapest
+						     </p>
+						  </li>
+						  <li>
+						     <p class="body">
+						        <span class="block-country-city-header">
+						        Switzerland
+						        </span>
+						        Zurich,
+						        Bern,
+						        Luzern,
+						        Geneva,
+						        Lausanne,
+						        Montreux,
+						        Fribourg,
+						        Chur,
+						        Davos,
+						        St Moritz,
+						        Zermatt
+						     </p>
+						  </li>
+						  <li>
+						     <p class="body">
+						        <span class="block-country-city-header">
+						        Spain
+						        </span>
+						        Madrid,
+						        Barcelona,
+						        Valencia,
+						        Zaragoza,
+						        Mallorca
+						     </p>
+						  </li>
+						  <li>
+						     <p class="body">
+						        <span class="block-country-city-header">
+						        United Kingdom
+						        </span>
+						        London
+						     </p>
+						  </li>
+						  <li>
+						     <p class="body">
+						        <span class="block-country-city-header">
+						        Belgium
+						        </span>,
+						        Brussels,
+						        Bruges
+						     </p>
+						  </li>
+						  <li>
+						     <p class="body">
+						        <span class="block-country-city-header">
+						        <a href="http://deimusmeister.blogspot.de/2012/05/china.html" class="underline">China</a>:
+						        </span>
+						        <a href="http://deimusmeister.blogspot.de/2012/05/china.html" class="underline">Beijing</a>,
+		                        <a href="http://deimusmeister.blogspot.de/2012/06/china-travelling-to-wuhan.html" class="underline">Wuhan</a>,
+		                        Shanghai,
+		                        Suzhou
+						     </p>
+						  </li>
+						  <li>
+						     <p class="body">
+						        <span class="block-country-city-header">
+						        Poland
+						        </span>
+						        Wrocław
+						     </p>
+						  </li>
+						  <li>
+						     <p class="body">
+						        <span class="block-country-city-header">
+						        Japan
+						        </span>
+						        Tokyo,
+						        Nagoya,
+						        Takayama,
+						        Kyoto,
+						        Hiroshima,
+						        Takayama
+						     </p>
+						  </li>
+						  <li>
+						     <p class="body">
+						        <span class="block-country-city-header">
+						        Slovakia
+						        </span>
+						        Bratislava
+						     </p>
+						  </li>
+						  <li>
+						     <p class="body">
+						        <span class="block-country-city-header">
+						        Slovenia
+						        </span>
+						        Ljubljana
+						     </p>
+						  </li>
+						  <li>
+						     <p class="body">
+						        <span class="block-country-city-header">
+						        Croatia
+						        </span>
+						        Zagreb
+						     </p>
+						  </li>
+						  <li>
+						     <p class="body">
+						        <span class="block-country-city-header">
+						        Greece
+						        </span>
+						        Athens,
+						        Kalabaka/Meteora,
+						        Delphi,
+						        Patras,
+						        Olympia,
+						        Nafplio/Mycenae/Epidaurus,
+						     </p>
+						  </li>
+						  <li>
+						     <p class="body">
+						        <span class="block-country-city-header">
+						        Liechtenstein
+						        </span>
+						        Vaduz
+						     </p>
+						  </li>
+						  <li>
+						     <p class="body">
+						        <span class="block-country-city-header">
+						        United States
+						        </span>
+						        Boston,
+						        New York,
+						        Philadelphia,
+						        Washington
+						     </p>
+						  </li>
+						  <li>
+						     <p class="body">
+						        <span class="block-country-city-header">
+						        Latvia
+						        </span>
+						        Riga,
+						        Jūrmala
+						     </p>
+						  </li>
+						  <li>
+						     <p class="body">
+						        <span class="block-country-city-header">
+						        Lithuania
+						        </span>
+						        Vilnius,
+						        Kaunas
+						     </p>
+						  </li>
+						  <li>
+						     <p class="body">
+						        <span class="block-country-city-header">
+						        Luxembourg
+						        </span>
+						     </p>
+						  </li>
+						  <li>
+						     <p class="body">
+						        <span class="block-country-city-header">
+						        Thailand
+						        </span>
+						        Bangkok,
+						        Ayutthaya,
+						        Pattaya
+						     </p>
+						  </li>
+						  <li>
+						     <p class="body">
+						        <span class="block-country-city-header">
+						        Vietnam
+						        </span>
+						        Hanoi,
+						        Ha Long,
+						        Ninh Binh
+						     </p>
+						  </li>
+						  <li>
+						     <p class="body">
+						        <span class="block-country-city-header">
+						        	<a href="http://deimusmeister.blogspot.de/2018/01/malta.html" class="underline">Malta</a>
+						        </span>
+						        Valletta,
+						        Mdina,
+						        Rabat,
+						        Marsaxlokk
+						     </p>
+						  </li>
+						  <li>
+						     <p class="body">
+						        <span class="block-country-city-header">
+						        Portugal
+						        </span>
+						        Lisbon
+						     </p>
+						  </li>
+						  <li>
+						     <p class="body">
+						        <span class="block-country-city-header">
+						        Singapore
+						        </span>
+						     </p>
+						  </li>
+						  <li>
+						     <p class="body">
+						        <span class="block-country-city-header">
+						        Malaysia
+						        </span>
+						        Melaka,
+						        Kuala Lumpur
+						     </p>
+						  </li>
+						  <li>
+						     <p class="body">
+						        <span class="block-country-city-header">
+						        Indonesia
+						        </span>
+						        Bali
+						     </p>
+						  </li>
+						  <li>
+						     <p class="body">
+						        <span class="block-country-city-header">
+						        Ireland
+						        </span>
+						        Dublin,
+						        Cliffs of Moher
+						     </p>
+						  </li>
+		                  <li>
+		                     <p class="body">
+		                        <span class="block-country-city-header">
+		                        Andorra
+		                        </span>
+		                        Andorra la Vella
+		                     </p>
+		                  </li>
+						  <li>
+						     <p class="body">
+						        <span class="block-country-city-header">
+						        Ukraine
+						        </span>
+						        Kiev,
+						        Chernihiv
+						     </p>
+						  </li>
+						  <li>
+						     <p class="body">
+						        <span class="block-country-city-header">
+						        Vatican City
+						        </span>
+						     </p>
+						  </li>
+						  <li>
+						     <p class="body">
+						        <span class="block-country-city-header">
+						        <a href="http://deimusmeister.blogspot.de/2018/01/san-marino-2017.html" class="underline">San Marino</a>
+						        </span>
+						     </p>
+						  </li>
+		               </ol>
+		            </div>
+		         </td>
+		      </tr>
+		   </tbody>
+		</table>
+        
+    </body>
+
+</html>
