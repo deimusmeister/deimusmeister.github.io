@@ -2,13 +2,13 @@
    { 
       "title":"Arduino IDE 1.5",
       "description":"",
-      "image":"https://deimusmeister.github.io/api/trips.json/api/graphics/arduino.png",
+      "image":"https://deimusmeister.github.io/api/graphics/arduino.png",
       "url":"https://www.transifex.com/mbanzi/arduino-ide-15/"
    },
    { 
       "title":"Telegram",
       "description":"",
-      "image":"https://deimusmeister.github.io/api/trips.json/api/graphics/telegram.png",
+      "image":"https://deimusmeister.github.io/api/graphics/telegram.png",
       "url":"https://t.me/setlanguage/armenianlanguage0"
    }
 ]
