@@ -1,67 +1,67 @@
 [ 
    { 
-      "title":"Մաս 1 : Պղպջակային տեսակավորում - Part 1: Bubble sorting",
-      "description":"",
+      "title":"Part 1: Bubble sorting",
+      "description":"Մաս 1 : Պղպջակային տեսակավորում",
       "image":"https://img.youtube.com/vi/gPgG__c1VLQ/hqdefault.jpg",
       "url":"https://www.youtube.com/watch?v=gPgG__c1VLQ"
    },
    { 
-      "title":"Մաս 2 : Ընտրության տեսակավորում - Part 2 : Selection sorting",
-      "description":"",
+      "title":"Part 2 : Selection sorting",
+      "description":"Մաս 2 : Ընտրության տեսակավորում",
       "image":"https://i9.ytimg.com/vi/V4DgSzVxfjo/mq1.jpg?sqp=CLf-0u8F&rs=AOn4CLBU72HMap2GH-itFH1HBYMgnNdXYA",
       "url":"https://www.youtube.com/watch?v=V4DgSzVxfjoZ"
    },
    { 
-      "title":"Մաս 3 : Ներդրմամբ տեսակավորում - Part 3 : Insertion sort",
-      "description":"",
+      "title":"Part 3 : Insertion sort",
+      "description":"Մաս 3 : Ներդրմամբ տեսակավորում",
       "image":"https://img.youtube.com/vi/VUNeN9VEHyE/hqdefault.jpg",
       "url":"https://www.youtube.com/watch?v=VUNeN9VEHyE"
    },
    { 
-      "title":"Մաս 4 : Միաձուլման տեսակավորում - Part 4 : Merge sorting",
-      "description":"",
+      "title":"Part 4 : Merge sorting",
+      "description":"Մաս 4 : Միաձուլման տեսակավորում",
       "image":"https://img.youtube.com/vi/2nZjepjW4-8/hqdefault.jpg",
       "url":"https://www.youtube.com/watch?v=2nZjepjW4-8"
    },
    { 
-      "title":"Մաս 5 : Արագ տեսակավորում - Part 5 : Quick sort",
-      "description":"",
+      "title":"Part 5 : Quick sort",
+      "description":"Մաս 5 : Արագ տեսակավորում",
       "image":"https://img.youtube.com/vi/hoNwFgN4D1I/hqdefault.jpg",
       "url":"https://www.youtube.com/watch?v=hoNwFgN4D1I"
    },
    { 
-      "title":"Մաս 6 : Ալգորիթմի վերլուծություն - Part 6 : Analysis of algorithm",
-      "description":"",
+      "title":"Part 6 : Analysis of algorithm",
+      "description":"Մաս 6 : Ալգորիթմի վերլուծություն",
       "image":"https://img.youtube.com/vi/2yXlKkl4QkY/hqdefault.jpg",
       "url":"https://www.youtube.com/watch?v=2yXlKkl4QkY"
    },
    { 
-      "title":"Մաս 1 : Զանգված - Part 1 : Array",
-      "description":"",
+      "title":"Part 1 : Array",
+      "description":"Մաս 1 : Զանգված",
       "image":"https://img.youtube.com/vi/UhmzAm1SULM/hqdefault.jpg",
       "url":"https://www.youtube.com/watch?v=UhmzAm1SULM"
    },
    { 
-      "title":"Մաս 2 : Կապակցված Ցուցակներ - Part 2 : Linked Lists",
-      "description":"",
+      "title":"Part 2 : Linked Lists",
+      "description":"Մաս 2 : Կապակցված Ցուցակներ",
       "image":"https://img.youtube.com/vi/GZEZUAUOtQc/hqdefault.jpg",
       "url":"https://www.youtube.com/watch?v=GZEZUAUOtQc"
    },
    { 
-      "title":"Մաս 3 : Ստեկ - Part 3 : Stack",
-      "description":"",
+      "title":"Part 3 : Stack",
+      "description":"Մաս 3 : Ստեկ",
       "image":"https://img.youtube.com/vi/kjlet-0OH9Y/hqdefault.jpg",
       "url":"https://www.youtube.com/watch?v=kjlet-0OH9Y"
    },
    { 
-      "title":"Մաս 4 : Հերթ - Part 4 : Queue",
-      "description":"",
+      "title":"Part 4 : Queue",
+      "description":"Մաս 4 : Հերթ",
       "image":"https://img.youtube.com/vi/lOh_NY-6G9s/hqdefault.jpg",
       "url":"https://www.youtube.com/watch?v=lOh_NY-6G9s"
    },
    { 
-      "title":"Մաս 5 : Բինար Որոնման Ծառ - Part 5 : Binary Search Tree",
-      "description":"",
+      "title":"Part 5 : Binary Search Tree",
+      "description":"Մաս 5 : Բինար Որոնման Ծառ",
       "image":"https://img.youtube.com/vi/VOZYudRgmR0/hqdefault.jpg",
       "url":"https://www.youtube.com/watch?v=VOZYudRgmR0"
    }

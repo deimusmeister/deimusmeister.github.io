@@ -1,13 +1,13 @@
 [ 
    { 
       "title":"Arduino IDE 1.5",
-      "description":"",
+      "description":"Translation of Arduino IDE 1.5",
       "image":"https://deimusmeister.github.io/api/graphics/arduino.png",
       "url":"https://www.transifex.com/mbanzi/arduino-ide-15/"
    },
    { 
       "title":"Telegram",
-      "description":"",
+      "description":"Translation of Telegram",
       "image":"https://deimusmeister.github.io/api/graphics/telegram.png",
       "url":"https://t.me/setlanguage/armenianlanguage0"
    }
