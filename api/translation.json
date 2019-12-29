@@ -10,5 +10,11 @@
       "description":"Translation of Telegram",
       "image":"https://deimusmeister.github.io/api/graphics/telegram.png",
       "url":"https://t.me/setlanguage/armenianlanguage0"
+   },
+   { 
+      "title":"Kotor, Wikipedia Page",
+      "description":"Կոտոր Քաղաքի Վիկի էձը",
+      "image":"https://deimusmeister.github.io/api/graphics/Kotor.png",
+      "url":"https://hy.wikipedia.org/w/index.php?title=%D4%BF%D5%B8%D5%BF%D5%B8%D6%80_(%D5%89%D5%A5%D5%BC%D5%B6%D5%B8%D5%A3%D5%B8%D6%80%D5%AB%D5%A1)&fbclid=IwAR3v4k2ShnPaaaXH4mF-hO7tHjDZM3fiy3cXwikRk-1Oeil1dWBh2scVGK4"
    }
 ]

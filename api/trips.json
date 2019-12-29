@@ -1,4 +1,16 @@
-[ 
+[
+   { 
+      "title":"Chicago USA",
+      "description":"An overview of Chicago - USA, country specifics",
+      "image":"https://1.bp.blogspot.com/-zHKDMrfO-4c/XgCzrOsbTZI/AAAAAAAAGL4/5nSoWz-gvuYO4tZX9Q_9jQO_cX32jUrSwCLcBGAsYHQ/s1600/IMG_3549.jpg",
+      "url":"http://deimusmeister.blogspot.com/2019/12/usa-chicago.html"
+   },
+   { 
+      "title":"Berlin",
+      "description":"An overview of Belarus, country specifics",
+      "image":"https://1.bp.blogspot.com/-HborbOMAYSg/Xf_eWOgD7RI/AAAAAAAAGHo/tZe_zBfyIvso5ijpgMDN7SHD0q3WA1RuACLcBGAsYHQ/s1600/IMG_2196.jpg",
+      "url":"http://deimusmeister.blogspot.com/2019/12/gerlin-berlin.html"
+   }, 
    { 
       "title":"Belarus",
       "description":"An overview of Belarus, country specifics",
