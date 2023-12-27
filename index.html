@@ -17,431 +17,477 @@
       <!-- map file should be included after ammap.js -->
       <script src="./ammap/maps/js/worldHigh.js" type="text/javascript"></script>
       <script>
-         var map;
-         
-         AmCharts.ready(function() {
-             map = new AmCharts.AmMap();
-         
-         
-             var dataProvider = {
-                 mapVar: AmCharts.maps.worldHigh,
-                 //zoomLevel: 0.5,
-                 //zoomLongitude: 10,
-                 //zoomLatitude: 52
-             };
-         
-                      
-             map.areasSettings = {
-                          color: "#EDAFB0",
-                 unlistedAreasColor: "#FFFFFF",
-                          unlistedAreasOutlineColor: "#272C2F",
-                          outlineColor: "#272C2F",
-                          outlineThickness: 0.5,
-                 rollOverOutlineColor: "#272C2F",
-                 rollOverColor: "#CC0000",
-                 balloonText: "[[title]] visited in [[customData]]"
-             };
-         
-             map.creditsPosition = "top-right";
-                      
-                      map.dragMap = false;
-                      map.zoomOnDoubleClick = false;
-                      map.zoomControl = {
-                          zoomControlEnabled: false,
-                          panControlEnabled: false,
-                          homeButtonEnabled: false
-                      };
-         
-         
-             dataProvider.areas = [
-                      {
-                          title: "Armenia",
-                          id: "AM",
-                          customData: "1987 (born :) )"},
-                      {
-                 title: "Russia",
-                 id: "RU",
-                 customData: "2009"},
-             {
-                 title: "Georgia",
-                 id: "GE",
-                 customData: "2009"},
-             {
-                 title: "Germany",
-                 id: "DE",
-                 customData: "2010"},
-             {
-                 title: "Austria",
-                 id: "AT",
-                 customData: "2010"},
-                      {
-                          title: "Netherlands",
-                          id: "NL",
-                          customData: "2010"},
-                      {
-                          title: "France",
-                          id: "FR",
-                          customData: "2010"},
-             {
-                 title: "Italy",
-                 id: "IT",
-                 customData: "2010"},
-                      {
-                          title: "Czechia (Czech Republic)",
-                          id: "CZ",
-                          customData: "2010"},
-             {
-                 title: "United Arab Emirates",
-                 id: "AE",
-                 customData: "2010"},
-                      {
-                          title: "Hungary",
-                          id: "HU",
-                          customData: "2011"},
-             {
-                 title: "Switzerland",
-                 id: "CH",
-                 customData: "2011"},
-             {
-                 title: "Spain",
-                 id: "ES",
-                 customData: "2011"},
-             {
-                 title: "United Kingdom",
-                 id: "GB",
-                 customData: "2012"},
-                      {
-                          title: "Belgium",
-                          id: "BE",
-                          customData: "2012"},
-             {
-                 title: "China",
-                 id: "CN",
-                 customData: "2012"},
-             {
-                 title: "Poland",
-                 id: "PL",
-                 customData: "2013"},
-             {
-                 title: "Japan",
-                 id: "JP",
-                 customData: "2014"},
-                      {
-                          title: "Slovakia",
-                          id: "SK",
-                          customData: "2014"},
-                      {
-                          title: "Slovenia",
-                          id: "SI",
-                          customData: "2015"},
-                      {
-                          title: "Croatia",
-                          id: "HR",
-                          customData: "2015"},
-                      {
-                          title: "Greece",
-                          id: "GR",
-                          customData: "2015"},
-                      {
-                          title: "Liechtenstein",
-                          id: "LI",
-                          customData: "2015"},
-                      {
-                          title: "United States",
-                          id: "US",
-                          customData: "2015"},
-             {
-                 title: "Latvia",
-                 id: "LV",
-                 customData: "2016"},
-             {
-                 title: "Lithuania",
-                 id: "LT",
-                 customData: "2016"},
-             {
-                 title: "Luxembourg",
-                 id: "LU",
-                 customData: "2016"},
-                      {
-                          title: "Thailand",
-                          id: "TH",
-                          customData: "2016"},
-                      {
-                          title: "Vietnam",
-                          id: "VN",
-                          customData: "2016"},
-             {
-                 title: "Malta",
-                 id: "MT",
-                 customData: "2017"},
-             {
-                 title: "Portugal",
-                 id: "PT",
-                 customData: "2017"},
-                      {
-                          title: "Singapore",
-                          id: "SG",
-                          customData: "2017"},
-                      {
-                          title: "Malaysia",
-                          id: "MY",
-                          customData: "2017"},
-                      {
-                          title: "Indonesia",
-                          id: "ID",
-                          customData: "2017"},
-             {
-                 title: "Ireland",
-                 id: "IE",
-                 customData: "2017"},
-             {
-                 title: "Andorra",
-                 id: "AD",
-                 customData: "2017"},
-             {
-                 title: "San Marino",
-                 id: "SM",
-                 customData: "2017"},
-                      {
-                          title: "Ukraine",
-                          id: "UA",
-                          customData: "2017"},
-                      {
-                          title: "Bulgaria",
-                          id: "BG",
-                          customData: "2018"},
-         	{
-                          title: "Monaco",
-                          id: "MC",
-                          customData: "2018"},
-         	{
-                          title: "Macedonia",
-                          id: "MK",
-                          customData: "2018"},
-         	{
-                          title: "Romania",
-                          id: "RO",
-                          customData: "2018"},
-         	{
-                          title: "Moldova",
-                          id: "MD",
-                          customData: "2018"},
-         	{
-                          title: "Cyprus",
-                          id: "CY",
-                          customData: "2018"},
-         	{
-                          title: "Finland",
-                          id: "FI",
-                          customData: "2018"},
-         	{
-                          title: "India",
-                          id: "IN",
-                          customData: "2018"},
-         	{
-                          title: "Montenegro",
-                          id: "ME",
-                          customData: "2018"},
-         	{
-                          title: "Bosnia and Herzegovina",
-                          id: "BA",
-                          customData: "2018"},
-         	{
-                          title: "Albania",
-                          id: "AL",
-                          customData: "2018"},
-         	{
-         		title: "Kosovo",
-         		id: "XK", 
-         		customData: "2023",
-         		balloonText: ""},
-         	{
-         		title: "Serbia",
-         		id: "RS",
-         		customData: "2019"
-         		},
-         	{
-         		title: "Israel",
-         		id: "IL",
-         		customData: "2019"
-         		},
-         	{
-         		title: "Norway",
-         		id: "NO",
-         		customData: "2019"
-         		},
-         	{
-         		title: "Iceland",
-         		id: "IS",
-         		customData: "2019"
-         		},
-         	{
-         		title: "Denmark",
-         		id: "DK",
-         		customData: "2019"
-         		},
-         	{
-         		title: "Sweden",
-         		id: "SE",
-         		customData: "2019"
-         		},
-         	{
-         		title: "Estonia",
-         		id: "EE",
-         		customData: "2019"
-         		},
-         	{
-         		title: "Mexico",
-         		id: "MX",
-         		customData: "2019"
-         		},
-         	{
-         		title: "Belarus",
-         		id: "BY",
-         		customData: "2019"
-         		},
-         	{
-         		title: "Turkey",
-         		id: "TR",
-         		customData: "2020"
-         		},
-         	{
-         		title: "South Africa",
-         		id: "ZA",
-         		customData: "2021"
-         		},
-         	{
-         		title: "Namibia",
-         		id: "NA",
-         		customData: "2021"
-         		},
-         	{
-         		title: "Tunisia",
-         		id: "TN",
-         		customData: "2021"
-         		},
-         	{
-         		title: "Jordan",
-         		id: "JO",
-         		customData: "2022"
-         		},
-         	{
-         		title: "Morocco",
-         		id: "MA",
-         		customData: "2022"
-         		},
-         	{
-         		title: "Kazakhstan",
-         		id: "KZ",
-         		customData: "2022"
-         		},
-         	{
-         		title: "Kyrgyzstan",
-         		id: "KG",
-         		customData: "2022"
-         		},
-         	{
-         		title: "Bahrain",
-         		id: "BH",
-         		customData: "2022"
-         		},
-         	{
-         		title: "Australia",
-         		id: "AU",
-         		customData: "2022"
-         		},
-         	{
-         		title: "Oman",
-         		id: "OM",
-         		customData: "2022"
-         		},
-         	{
-         		title: "Saudi Arabia",
-         		id: "SA",
-         		customData: "2022"
-         		},
-         	{
-         		title: "Kuwait",
-         		id: "KW",
-         		customData: "2022"
-         		},
-         	{
-         		title: "Egypt",
-         		id: "EG",
-         		customData: "2022"
-         		},
-         	{
-         		title: "Maldives",
-         		id: "MV",
-         		customData: "2023"
-         		},
-         	{
-         		title: "Uzbekistan",
-         		id: "UZ",
-         		customData: "2023"
-         		},
-                 {
-         		title: "New Zealand",
-         		id: "NZ",
-         		customData: "2023"
-         		},
-         	{
-         		title: "Qatar",
-         		id: "QA",
-         		customData: "2023"
-         		},
-                 {
-         		title: "Tanzania",
-         		id: "TZ",
-         		customData: "2023"
-         		},
-                 {
-         		title: "Kenya",
-         		id: "KE",
-         		customData: "2023"
-         		},
-                 {
-         		title: "South Korea",
-         		id: "KR",
-         		customData: "2023"
-         		},
-                 {
-         		title: "Fiji",
-         		id: "FJ",
-         		customData: "2023"
-         		},
-            ];
-         
-             map.dataProvider = dataProvider;
-         
-             var legend = {
-                 width: 600,
-                 backgroundAlpha: 0.5,
-                 backgroundColor: "#FFFFFF",
-                 borderColor: "#666666",
-                 borderAlpha: 1,
-                 bottom: 15,
-                 left: 15,
-                 horizontalGap: 10,
-                 data: [
-                     {
-                     title: "Joined EU before 2004",
-                     color: "#3366CC"},
-                 {
-                     title: "Joined EU at 2004",
-                     color: "#FFCC33"},
-                 {
-                     title: "Joined EU at 2007",
-                     color: "#66CC99"}
-                 ]
-             };
-         
-             //map.addLegend(legend);
-             map.write("mapdiv");
-         
-         });
-         
-              
+        var map;
+	
+	AmCharts.ready(function() {
+	    map = new AmCharts.AmMap();
+
+	    var dataProvider = {
+	        mapVar: AmCharts.maps.worldHigh,
+	        //zoomLevel: 0.5,
+	        //zoomLongitude: 10,
+	        //zoomLatitude: 52
+	    };
+	
+	    map.areasSettings = {
+	        color: "#EDAFB0",
+	        unlistedAreasColor: "#FFFFFF",
+	        unlistedAreasOutlineColor: "#272C2F",
+	        outlineColor: "#272C2F",
+	        outlineThickness: 0.5,
+	        rollOverOutlineColor: "#272C2F",
+	        rollOverColor: "#CC0000",
+	        balloonText: "[[title]] visited in [[customData]]"
+	    };
+	
+	    map.creditsPosition = "top-right";
+	
+	    map.dragMap = false;
+	    map.zoomOnDoubleClick = false;
+	    map.zoomControl = {
+	        zoomControlEnabled: false,
+	        panControlEnabled: false,
+	        homeButtonEnabled: false
+	    };
+	
+	    dataProvider.areas = [{
+	            title: "Armenia",
+	            id: "AM",
+	            customData: "1987 (born :) )"
+	        },
+	        {
+	            title: "Russia",
+	            id: "RU",
+	            customData: "2009"
+	        },
+	        {
+	            title: "Georgia",
+	            id: "GE",
+	            customData: "2009"
+	        },
+	        {
+	            title: "Germany",
+	            id: "DE",
+	            customData: "2010"
+	        },
+	        {
+	            title: "Austria",
+	            id: "AT",
+	            customData: "2010"
+	        },
+	        {
+	            title: "Netherlands",
+	            id: "NL",
+	            customData: "2010"
+	        },
+	        {
+	            title: "France",
+	            id: "FR",
+	            customData: "2010"
+	        },
+	        {
+	            title: "Italy",
+	            id: "IT",
+	            customData: "2010"
+	        },
+	        {
+	            title: "Czechia (Czech Republic)",
+	            id: "CZ",
+	            customData: "2010"
+	        },
+	        {
+	            title: "United Arab Emirates",
+	            id: "AE",
+	            customData: "2010"
+	        },
+	        {
+	            title: "Hungary",
+	            id: "HU",
+	            customData: "2011"
+	        },
+	        {
+	            title: "Switzerland",
+	            id: "CH",
+	            customData: "2011"
+	        },
+	        {
+	            title: "Spain",
+	            id: "ES",
+	            customData: "2011"
+	        },
+	        {
+	            title: "United Kingdom",
+	            id: "GB",
+	            customData: "2012"
+	        },
+	        {
+	            title: "Belgium",
+	            id: "BE",
+	            customData: "2012"
+	        },
+	        {
+	            title: "China",
+	            id: "CN",
+	            customData: "2012"
+	        },
+	        {
+	            title: "Poland",
+	            id: "PL",
+	            customData: "2013"
+	        },
+	        {
+	            title: "Japan",
+	            id: "JP",
+	            customData: "2014"
+	        },
+	        {
+	            title: "Slovakia",
+	            id: "SK",
+	            customData: "2014"
+	        },
+	        {
+	            title: "Slovenia",
+	            id: "SI",
+	            customData: "2015"
+	        },
+	        {
+	            title: "Croatia",
+	            id: "HR",
+	            customData: "2015"
+	        },
+	        {
+	            title: "Greece",
+	            id: "GR",
+	            customData: "2015"
+	        },
+	        {
+	            title: "Liechtenstein",
+	            id: "LI",
+	            customData: "2015"
+	        },
+	        {
+	            title: "United States",
+	            id: "US",
+	            customData: "2015"
+	        },
+	        {
+	            title: "Latvia",
+	            id: "LV",
+	            customData: "2016"
+	        },
+	        {
+	            title: "Lithuania",
+	            id: "LT",
+	            customData: "2016"
+	        },
+	        {
+	            title: "Luxembourg",
+	            id: "LU",
+	            customData: "2016"
+	        },
+	        {
+	            title: "Thailand",
+	            id: "TH",
+	            customData: "2016"
+	        },
+	        {
+	            title: "Vietnam",
+	            id: "VN",
+	            customData: "2016"
+	        },
+	        {
+	            title: "Malta",
+	            id: "MT",
+	            customData: "2017"
+	        },
+	        {
+	            title: "Portugal",
+	            id: "PT",
+	            customData: "2017"
+	        },
+	        {
+	            title: "Singapore",
+	            id: "SG",
+	            customData: "2017"
+	        },
+	        {
+	            title: "Malaysia",
+	            id: "MY",
+	            customData: "2017"
+	        },
+	        {
+	            title: "Indonesia",
+	            id: "ID",
+	            customData: "2017"
+	        },
+	        {
+	            title: "Ireland",
+	            id: "IE",
+	            customData: "2017"
+	        },
+	        {
+	            title: "Andorra",
+	            id: "AD",
+	            customData: "2017"
+	        },
+	        {
+	            title: "San Marino",
+	            id: "SM",
+	            customData: "2017"
+	        },
+	        {
+	            title: "Ukraine",
+	            id: "UA",
+	            customData: "2017"
+	        },
+	        {
+	            title: "Bulgaria",
+	            id: "BG",
+	            customData: "2018"
+	        },
+	        {
+	            title: "Monaco",
+	            id: "MC",
+	            customData: "2018"
+	        },
+	        {
+	            title: "Macedonia",
+	            id: "MK",
+	            customData: "2018"
+	        },
+	        {
+	            title: "Romania",
+	            id: "RO",
+	            customData: "2018"
+	        },
+	        {
+	            title: "Moldova",
+	            id: "MD",
+	            customData: "2018"
+	        },
+	        {
+	            title: "Cyprus",
+	            id: "CY",
+	            customData: "2018"
+	        },
+	        {
+	            title: "Finland",
+	            id: "FI",
+	            customData: "2018"
+	        },
+	        {
+	            title: "India",
+	            id: "IN",
+	            customData: "2018"
+	        },
+	        {
+	            title: "Montenegro",
+	            id: "ME",
+	            customData: "2018"
+	        },
+	        {
+	            title: "Bosnia and Herzegovina",
+	            id: "BA",
+	            customData: "2018"
+	        },
+	        {
+	            title: "Albania",
+	            id: "AL",
+	            customData: "2018"
+	        },
+	        {
+	            title: "Kosovo",
+	            id: "XK",
+	            customData: "2023",
+	            balloonText: ""
+	        },
+	        {
+	            title: "Serbia",
+	            id: "RS",
+	            customData: "2019"
+	        },
+	        {
+	            title: "Israel",
+	            id: "IL",
+	            customData: "2019"
+	        },
+	        {
+	            title: "Norway",
+	            id: "NO",
+	            customData: "2019"
+	        },
+	        {
+	            title: "Iceland",
+	            id: "IS",
+	            customData: "2019"
+	        },
+	        {
+	            title: "Denmark",
+	            id: "DK",
+	            customData: "2019"
+	        },
+	        {
+	            title: "Sweden",
+	            id: "SE",
+	            customData: "2019"
+	        },
+	        {
+	            title: "Estonia",
+	            id: "EE",
+	            customData: "2019"
+	        },
+	        {
+	            title: "Mexico",
+	            id: "MX",
+	            customData: "2019"
+	        },
+	        {
+	            title: "Belarus",
+	            id: "BY",
+	            customData: "2019"
+	        },
+	        {
+	            title: "Turkey",
+	            id: "TR",
+	            customData: "2020"
+	        },
+	        {
+	            title: "South Africa",
+	            id: "ZA",
+	            customData: "2021"
+	        },
+	        {
+	            title: "Namibia",
+	            id: "NA",
+	            customData: "2021"
+	        },
+	        {
+	            title: "Tunisia",
+	            id: "TN",
+	            customData: "2021"
+	        },
+	        {
+	            title: "Jordan",
+	            id: "JO",
+	            customData: "2022"
+	        },
+	        {
+	            title: "Morocco",
+	            id: "MA",
+	            customData: "2022"
+	        },
+	        {
+	            title: "Kazakhstan",
+	            id: "KZ",
+	            customData: "2022"
+	        },
+	        {
+	            title: "Kyrgyzstan",
+	            id: "KG",
+	            customData: "2022"
+	        },
+	        {
+	            title: "Bahrain",
+	            id: "BH",
+	            customData: "2022"
+	        },
+	        {
+	            title: "Australia",
+	            id: "AU",
+	            customData: "2022"
+	        },
+	        {
+	            title: "Oman",
+	            id: "OM",
+	            customData: "2022"
+	        },
+	        {
+	            title: "Saudi Arabia",
+	            id: "SA",
+	            customData: "2022"
+	        },
+	        {
+	            title: "Kuwait",
+	            id: "KW",
+	            customData: "2022"
+	        },
+	        {
+	            title: "Egypt",
+	            id: "EG",
+	            customData: "2022"
+	        },
+	        {
+	            title: "Maldives",
+	            id: "MV",
+	            customData: "2023"
+	        },
+	        {
+	            title: "Uzbekistan",
+	            id: "UZ",
+	            customData: "2023"
+	        },
+	        {
+	            title: "New Zealand",
+	            id: "NZ",
+	            customData: "2023"
+	        },
+	        {
+	            title: "Qatar",
+	            id: "QA",
+	            customData: "2023"
+	        },
+	        {
+	            title: "Tanzania",
+	            id: "TZ",
+	            customData: "2023"
+	        },
+	        {
+	            title: "Kenya",
+	            id: "KE",
+	            customData: "2023"
+	        },
+	        {
+	            title: "South Korea",
+	            id: "KR",
+	            customData: "2023"
+	        },
+	        {
+	            title: "Fiji",
+	            id: "FJ",
+	            customData: "2023"
+	        },
+	    ];
+	
+	    map.dataProvider = dataProvider;
+	
+	    var legend = {
+	        width: 600,
+	        backgroundAlpha: 0.5,
+	        backgroundColor: "#FFFFFF",
+	        borderColor: "#666666",
+	        borderAlpha: 1,
+	        bottom: 15,
+	        left: 15,
+	        horizontalGap: 10,
+	        data: [{
+	                title: "Joined EU before 2004",
+	                color: "#3366CC"
+	            },
+	            {
+	                title: "Joined EU at 2004",
+	                color: "#FFCC33"
+	            },
+	            {
+	                title: "Joined EU at 2007",
+	                color: "#66CC99"
+	            }
+	        ]
+	    };
+	
+	    //map.addLegend(legend);
+	    map.write("mapdiv");
+	
+	});
       </script>
       <link rel="stylesheet" type="text/css" href="main.css">
       <link rel="stylesheet" type="text/css" href="links.css">
