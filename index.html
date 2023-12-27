@@ -1,1487 +1,1483 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-
-    <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-11885304-3"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'UA-11885304-3');
-	</script>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>Expeditions Map</title>
-
-        <link rel="stylesheet" href="./ammap/ammap.css" type="text/css">
-        <script src="./ammap/ammap.js" type="text/javascript"></script>
-        <!-- map file should be included after ammap.js -->
-		<script src="./ammap/maps/js/worldHigh.js" type="text/javascript"></script>
-        <script>
-			var map;
-
-			AmCharts.ready(function() {
-			    map = new AmCharts.AmMap();
-
-
-			    var dataProvider = {
-			        mapVar: AmCharts.maps.worldHigh,
-			        //zoomLevel: 0.5,
-			        //zoomLongitude: 10,
-			        //zoomLatitude: 52
-			    };
-
-                
-			    map.areasSettings = {
-                    color: "#EDAFB0",
-			        unlistedAreasColor: "#FFFFFF",
-                    unlistedAreasOutlineColor: "#272C2F",
-                    outlineColor: "#272C2F",
-                    outlineThickness: 0.5,
-			        rollOverOutlineColor: "#272C2F",
-			        rollOverColor: "#CC0000",
-			        balloonText: "[[title]] visited in [[customData]]"
-			    };
-
-			    map.creditsPosition = "top-right";
-                
-                map.dragMap = false;
-                map.zoomOnDoubleClick = false;
-                map.zoomControl = {
-                    zoomControlEnabled: false,
-                    panControlEnabled: false,
-                    homeButtonEnabled: false
-                };
-
-
-			    dataProvider.areas = [
-                {
-                    title: "Armenia",
-                    id: "AM",
-                    customData: "1987 (born :) )"},
-                {
-			        title: "Russia",
-			        id: "RU",
-			        customData: "2009"},
-			    {
-			        title: "Georgia",
-			        id: "GE",
-			        customData: "2009"},
-			    {
-			        title: "Germany",
-			        id: "DE",
-			        customData: "2010"},
-			    {
-			        title: "Austria",
-			        id: "AT",
-			        customData: "2010"},
-                {
-                    title: "Netherlands",
-                    id: "NL",
-                    customData: "2010"},
-                {
-                    title: "France",
-                    id: "FR",
-                    customData: "2010"},
-			    {
-			        title: "Italy",
-			        id: "IT",
-			        customData: "2010"},
-                {
-                    title: "Czechia (Czech Republic)",
-                    id: "CZ",
-                    customData: "2010"},
-			    {
-			        title: "United Arab Emirates",
-			        id: "AE",
-			        customData: "2010"},
-                {
-                    title: "Hungary",
-                    id: "HU",
-                    customData: "2011"},
-			    {
-			        title: "Switzerland",
-			        id: "CH",
-			        customData: "2011"},
-			    {
-			        title: "Spain",
-			        id: "ES",
-			        customData: "2011"},
-			    {
-			        title: "United Kingdom",
-			        id: "GB",
-			        customData: "2012"},
-                {
-                    title: "Belgium",
-                    id: "BE",
-                    customData: "2012"},
-			    {
-			        title: "China",
-			        id: "CN",
-			        customData: "2012"},
-			    {
-			        title: "Poland",
-			        id: "PL",
-			        customData: "2013"},
-			    {
-			        title: "Japan",
-			        id: "JP",
-			        customData: "2014"},
-                {
-                    title: "Slovakia",
-                    id: "SK",
-                    customData: "2014"},
-                {
-                    title: "Slovenia",
-                    id: "SI",
-                    customData: "2015"},
-                {
-                    title: "Croatia",
-                    id: "HR",
-                    customData: "2015"},
-                {
-                    title: "Greece",
-                    id: "GR",
-                    customData: "2015"},
-                {
-                    title: "Liechtenstein",
-                    id: "LI",
-                    customData: "2015"},
-                {
-                    title: "United States",
-                    id: "US",
-                    customData: "2015"},
-			    {
-			        title: "Latvia",
-			        id: "LV",
-			        customData: "2016"},
-			    {
-			        title: "Lithuania",
-			        id: "LT",
-			        customData: "2016"},
-			    {
-			        title: "Luxembourg",
-			        id: "LU",
-			        customData: "2016"},
-                {
-                    title: "Thailand",
-                    id: "TH",
-                    customData: "2016"},
-                {
-                    title: "Vietnam",
-                    id: "VN",
-                    customData: "2016"},
-			    {
-			        title: "Malta",
-			        id: "MT",
-			        customData: "2017"},
-			    {
-			        title: "Portugal",
-			        id: "PT",
-			        customData: "2017"},
-                {
-                    title: "Singapore",
-                    id: "SG",
-                    customData: "2017"},
-                {
-                    title: "Malaysia",
-                    id: "MY",
-                    customData: "2017"},
-                {
-                    title: "Indonesia",
-                    id: "ID",
-                    customData: "2017"},
-			    {
-			        title: "Ireland",
-			        id: "IE",
-			        customData: "2017"},
-			    {
-			        title: "Andorra",
-			        id: "AD",
-			        customData: "2017"},
-			    {
-			        title: "San Marino",
-			        id: "SM",
-			        customData: "2017"},
-                {
-                    title: "Ukraine",
-                    id: "UA",
-                    customData: "2017"},
-                {
-                    title: "Bulgaria",
-                    id: "BG",
-                    customData: "2018"},
-				{
-                    title: "Monaco",
-                    id: "MC",
-                    customData: "2018"},
-				{
-                    title: "Macedonia",
-                    id: "MK",
-                    customData: "2018"},
-				{
-                    title: "Romania",
-                    id: "RO",
-                    customData: "2018"},
-				{
-                    title: "Moldova",
-                    id: "MD",
-                    customData: "2018"},
-				{
-                    title: "Cyprus",
-                    id: "CY",
-                    customData: "2018"},
-				{
-                    title: "Finland",
-                    id: "FI",
-                    customData: "2018"},
-				{
-                    title: "India",
-                    id: "IN",
-                    customData: "2018"},
-				{
-                    title: "Montenegro",
-                    id: "ME",
-                    customData: "2018"},
-				{
-                    title: "Bosnia and Herzegovina",
-                    id: "BA",
-                    customData: "2018"},
-				{
-                    title: "Albania",
-                    id: "AL",
-                    customData: "2018"},
-				{
-					title: "Kosovo",
-					id: "XK", 
-					customData: "2023",
-					balloonText: ""},
-				{
-					title: "Serbia",
-					id: "RS",
-					customData: "2019"
-					},
-				{
-					title: "Israel",
-					id: "IL",
-					customData: "2019"
-					},
-				{
-					title: "Norway",
-					id: "NO",
-					customData: "2019"
-					},
-				{
-					title: "Iceland",
-					id: "IS",
-					customData: "2019"
-					},
-				{
-					title: "Denmark",
-					id: "DK",
-					customData: "2019"
-					},
-				{
-					title: "Sweden",
-					id: "SE",
-					customData: "2019"
-					},
-				{
-					title: "Estonia",
-					id: "EE",
-					customData: "2019"
-					},
-				{
-					title: "Mexico",
-					id: "MX",
-					customData: "2019"
-					},
-				{
-					title: "Belarus",
-					id: "BY",
-					customData: "2019"
-					},
-				{
-					title: "Turkey",
-					id: "TR",
-					customData: "2020"
-					},
-				{
-					title: "South Africa",
-					id: "ZA",
-					customData: "2021"
-					},
-				{
-					title: "Namibia",
-					id: "NA",
-					customData: "2021"
-					},
-				{
-					title: "Tunisia",
-					id: "TN",
-					customData: "2021"
-					},
-				{
-					title: "Jordan",
-					id: "JO",
-					customData: "2022"
-					},
-				{
-					title: "Morocco",
-					id: "MA",
-					customData: "2022"
-					},
-				{
-					title: "Kazakhstan",
-					id: "KZ",
-					customData: "2022"
-					},
-				{
-					title: "Kyrgyzstan",
-					id: "KG",
-					customData: "2022"
-					},
-				{
-					title: "Bahrain",
-					id: "BH",
-					customData: "2022"
-					},
-				{
-					title: "Australia",
-					id: "AU",
-					customData: "2022"
-					},
-				{
-					title: "Oman",
-					id: "OM",
-					customData: "2022"
-					},
-				{
-					title: "Saudi Arabia",
-					id: "SA",
-					customData: "2022"
-					},
-				{
-					title: "Kuwait",
-					id: "KW",
-					customData: "2022"
-					},
-				{
-					title: "Egypt",
-					id: "EG",
-					customData: "2022"
-					},
-				{
-					title: "Maldives",
-					id: "MV",
-					customData: "2023"
-					},
-				{
-					title: "Uzbekistan",
-					id: "UZ",
-					customData: "2023"
-					},
-			        {
-					title: "New Zealand",
-					id: "NZ",
-					customData: "2023"
-					},
-				{
-					title: "Qatar",
-					id: "QA",
-					customData: "2023"
-					},
-			        {
-					title: "Tanzania",
-					id: "TZ",
-					customData: "2023"
-					},
-			        {
-					title: "Kenya",
-					id: "KE",
-					customData: "2023"
-					},
-			        {
-					title: "South Korea",
-					id: "KR",
-					customData: "2023"
-					},
-			        {
-					title: "Fiji",
-					id: "FJ",
-					customData: "2023"
-					},
-		    ];
-
-			    map.dataProvider = dataProvider;
-
-			    var legend = {
-			        width: 600,
-			        backgroundAlpha: 0.5,
-			        backgroundColor: "#FFFFFF",
-			        borderColor: "#666666",
-			        borderAlpha: 1,
-			        bottom: 15,
-			        left: 15,
-			        horizontalGap: 10,
-			        data: [
-			            {
-			            title: "Joined EU before 2004",
-			            color: "#3366CC"},
-			        {
-			            title: "Joined EU at 2004",
-			            color: "#FFCC33"},
-			        {
-			            title: "Joined EU at 2007",
-			            color: "#66CC99"}
-			        ]
-			    };
-
-			    //map.addLegend(legend);
-			    map.write("mapdiv");
-
-			});
-
-        </script>
-        <link rel="stylesheet" type="text/css" href="main.css">
-        <link rel="stylesheet" type="text/css" href="links.css">
-        <link rel="stylesheet" type="text/css" href="travel.css">
-    </head>
-
-    <body>
-    
-    	<div style="margin-left:15px; margin-top:15px; margin-bottom:25px">
-			<h1 lang="en" style="" class="main_title">Expeditions Map</h1>
-		</div>
-    
-        <div id="mapdiv" style="width: 99%; background-color:#c4efff; height: 700px; border: 0.5px solid #000; border-radius: 5px; -moz-border-radius: 5px;"></div>
-        
-		<table class="main-table" cellpadding="15">
-		   <tbody>
-		      <tr>
-		         <td>
-		            <div lang="en">
-		               <ol class="block-country-city">
-		                  <li>
-		                     <p class="body">
-		                        <span class="block-country-city-header">
-		                        <!-- 
-		                        <a href="./soon/index.html" class="underline">Armenia</a>:
-		                        </span>
-		                        <a href="./soon/index.html#gagry" class="underline">Gyumri</a>,
-		                        <a href="./soon/index.html#gudauta" class="underline">Yerevan</a>
-		                        -->
-								Armenia:
-		                        </span>
-					<a href="https://deimusmeister.blogspot.com/2018/08/armenia-gyumri.html" class="underline">Gyumri</a>,
-		                        <a href="https://deimusmeister.blogspot.com/2018/08/armenia-yerevan.html" class="underline">Yerevan</a>
-		                     </p>
-		                  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        Russia:
-						        </span>
-						        Moscow,
-						        Dimitrov
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        Georgia:
-						        </span>
-						        Tbilisi,
-						        Sighnaghi,
-						        Mtskheta
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        Germany:
-						        </span>
-								Munich,
-								<a href="https://deimusmeister.blogspot.com/2019/12/gerlin-berlin.html" class="underline">Berlin</a>,
-								Köln,
-								Bonn,
-								Dresden,
-								Leipzig,
-								Chemnitz,
-								Hamburg,
-								Stuttgart,
-								Ulm,
-								Frankfurt am Main,
-								Karlsruhe,
-								Augsburg,
-								<a href="https://deimusmeister.blogspot.com/2020/03/germany-nuremberg.html" class="underline">Nurmberg</a>,
-								Landsberg am Lech,
-								Starnberg,
-								Rosenheim,
-								<a href="https://deimusmeister.blogspot.com/2020/08/germany-fussen.html" class="underline">Füssen</a>,
-								<a href="https://deimusmeister.blogspot.com/2020/07/germany-murnau-am-staffelsee.html" class="underline">Murnau am Staffelsee</a>,
-								<a href="https://deimusmeister.blogspot.com/2020/07/germany-garmisch-partenkirchen.html" class="underline">Garmisch Parterkirchen</a>,
-								Konstanz,
-								Apolda,
-								Jena,
-								Erfurt,
-								Weimar,
-								Magdeburg,
-								Bamberg,
-								Furstenfeldbruck,
-								<a href="https://deimusmeister.blogspot.de/2018/03/germany-landshut.html" class="underline">Landshut</a>,
-								Rostock,
-								<a href="http://deimusmeister.blogspot.com/2020/06/germany-dingolfing.html" class="underline">Dingolfing</a>,
-								<a href="https://deimusmeister.blogspot.com/2020/07/germany-markt-schwaben.html" class="underline">Markt Schwaben</a>,
-								<a href="https://deimusmeister.blogspot.com/2020/07/germany.html" class="underline">Ebersberg</a>,
-								<a href="https://deimusmeister.blogspot.com/2020/07/grafing-is-small-town-near-munich-in.html" class="underline">Grafing</a>,
-								<a href="https://deimusmeister.blogspot.com/2020/07/germany-rothenburg-ob-der-tauber.html" class="underline">Rothenburg ob Tauber</a>,
-								<a href="https://deimusmeister.blogspot.com/2020/07/germany-wurzburg.html" class="underline">Würzburg</a>,
-								<a href="https://deimusmeister.blogspot.com/2020/08/germany-wasserburg-am-inn.html" class="underline">Wasserburg am Inn</a>,
-								<a href="https://deimusmeister.blogspot.com/2020/08/germany-haag-in-oberbayern.html" class="underline">Haag in Oberbayern</a>,
-								<a href="https://deimusmeister.blogspot.com/2020/08/germany-holzkirchen.html" class="underline">Holzkirchen</a>,
-								<a href="https://deimusmeister.blogspot.com/2020/08/germany-bad-tolz.html" class="underline">Bad Tölz</a>,
-								<a href="https://deimusmeister.blogspot.com/2020/08/germany-wolfsrathausen.html" class="underline">Wolfsrathausen</a>,
-								<a href="https://deimusmeister.blogspot.com/2020/08/germany-lindau.html" class="underline">Lindau</a>,
-								Kaufbeuren, 
-								Kempten,
-								Baden Baden,
-								Freiburg,
-								Inn am Ammersee,
-								Aying,
-								Feldkirchen-Westerham,
-								Bad Aibling,
-								Herrsching,
-								Weilheim im Oberbayern,
-								Pfaffenhofen an der Ilm,
-								Ingolstadt,
-								Neuburg an der Donau,
-								Allersberg,
-								Fürth,
-								Erlangen,
-								Landau an der Isar,
-								Straubing,
-								Deggendorf,
-								Nördlingen,
-								Dinkelsbühl,
-								Moosburg,
-								Altomünster,
-								Riem,
-								<a href="https://deimusmeister.medium.com/germany-kissing-abec9c2ccabd" class="underline">Kissing</a>
-								Aichach,
-								Frieberg,
-								Dorfen,
-								Waldkraiburg,
-								Mühldorf,
-								Neuötting,
-								Altötting,
-								Burghausen,
-								Traunstein,
-								Bad Reichenhall, 
-								Berchtesgaden,
-								Donauwörth,
-								Weißenburg in Bayern,
-								Mainburg,
-								Schwandorf,
-								Amberg,
-								Bayreuth,
-								Buchloe,
-								Mindelheim,
-								Ottobeuren,
-								Denkendorf,
-								Eichstätt,
-								Roth,
-								Schwabach,
-								Ansbach,
-								Günzburg,
-								Laupheim,
-								Biberach,
-							        Neufarhn bei Freising,
-							     	Scheyern,
-							        Markt Indersdorf,
-							        Mannheim,
-							     	Heidelberg,
-							        Keiserslautern,
-							        Saarbruecken,
-							        Bochum,
-							        Düsseldorf,
-							        Kettwig,
-							        Essen,
-							        Aachen,
-							        Beilingriss,
-							        Kulmbach,
-							        Berching,
-							     	Hof,
-							        Weiden,
-							        Kelheim,
-							        Markt Essig,
-							        Riedenburg,
-							        Gröbenzell,
-							        Schondorf.
-							        Puchheim,
-							        Oberschleissheim,
-							        Rottenbuch,
-							        Pörnbach
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        Austria:
-						        </span>
-						        Vienna,
-						        Salzbourg,
-						        Linz,
-						        Innsbruck,
-						        Ischgl,
-						        <a href="https://deimusmeister.blogspot.com/2019/08/austria-villach.html" class="underline">Villach</a>,
-								Klagenfurt,
-								Golling,
-						        Hallein,
-						        Sankt Michael,
-						        Flachau,
-						        Gmund,
-						        <a href="https://deimusmeister.blogspot.com/2018/05/austira-hallstatt.html" class="underline">Hallstatt</a>,
-						        Velden am Wörthersee,
-						        Graz,
-						        Meerauge,
-						        Ferlach,
-						        Spittal,
-						        Radstadt,
-						        Bischofshofen, 
-						        Sant Johann im Pongau, 
-						        Millstatt am See, 
-						        Alternmarkt,
-							Feldkirch
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        Netherlands:
-						        </span>
-							<a href="http://deimusmeister.blogspot.com/2020/05/netherland-amsterdam.html" class="underline">Amsterdam</a>,
-							Utrecht,
-							The Hague,
-							Delft,
-							Rotterdam,
-							Kinderdijk,
-							Eindhoven,
-							Maastricht
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        France:
-						        </span>
-						        Paris,
-						        Saint-Genis-Pouilly,
-						        <a href="http://deimusmeister.blogspot.de/2018/05/france-menton.html" class="underline">Menton</a>,
-						        <a href="http://deimusmeister.blogspot.de/2018/05/frace-nice.html" class="underline">Nice</a>,
-						        <a href="http://deimusmeister.blogspot.de/2018/05/france-cannes.html" class="underline">Cannes</a>
-						        Strasbourg,
-						        Obernai,
-						        Mittelberg,
-						        Ribeauvillé,
-						        Riquewihr,
-						        Kayserberg,
-						        Colmar,
-							Caen,
-							Omaha Beach,
-							Mont Saint-Michel,
-							Saint-Lô,
-							Valbonne
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						    	Italy:
-						        </span>
-						        Rome,
-							<a href="http://deimusmeister.blogspot.de/2018/05/italy-milan.html" class="underline">Milan</a>,
-						        Turin,
-						        Verona,
-						        Bologna,
-						        Genoa,
-						        Portofino,
-						        Florence,
-						        Pisa,
-						        Maranello,
-						        Sant'Agata Bolognese,
-						        Venice,
-						        Padua,
-						        <a href="https://deimusmeister.blogspot.com/2020/03/italy-bergamo.html" class="underline">Bergamo</a>,					        
-						        Brescia,
-							<a href="http://deimusmeister.blogspot.de/2018/05/italy-celle-ligure.html" class="underline">Celle Ligure</a>,					        
-						        Udine,
-						        Rimini,
-						        Rovereto,
-						        Modena,
-						        Trento,
-							Tarvisio,
-							<a href="https://deimusmeister.medium.com/trieste-69fe91fa26ff" class="underline">Trieste</a>,
-							Pompei,
-							Siena,
-							Lucca,
-							Bolzano,
-							Merano
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        Czechia (Czech Republic):
-						        </span>
-						        Prague,
-						        Pilsen,
-						        České Budějovice,
-						        <a href="https://deimusmeister.blogspot.com/2020/06/cesky-krumlov.html" class="underline">Český Krumlov</a>,
-							Cheb,
-							Karlovy Vary,
-							Klatovy
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        United Arab Emirates:
-						        </span>
-						        <a href="http://deimusmeister.blogspot.com/2020/05/emirates-dubai.html" class="underline">Dubai</a>,
-							Abu Dhabi
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        <a href="http://deimusmeister.blogspot.com/2020/05/hungary-budapest.html" class="underline">Hungary</a>:
-						        </span>
-						        Budapest
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        Switzerland:
-						        </span>
-						        Zurich,
-						        Bern,
-						        Luzern,
-						        <a href="http://deimusmeister.blogspot.com/2013/01/geneva.html" class="underline">Geneva</a>,
-						        Lausanne,
-						        Montreux,
-						        Fribourg,
-						        Chur,
-						        Davos,
-						        St Moritz,
-						        Zermatt
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        Spain:
-						        </span>
-						        Madrid,
-						        Toledo,
-						        <a href="https://deimusmeister.blogspot.com/2020/04/spain-barcelona.html" class="underline">Barcelona</a>,
-						        Valencia,
-						        Zaragoza,
-						        Mallorca,
-						        Seville, 
-						        Cordoba,
-						        Malaga,
-						        Algeciras,
-						        Grenada
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        United Kingdom:
-						        </span>
-						        London,
-						        <a href="https://deimusmeister.blogspot.com/2018/10/scotland-edinburgh.html" class="underline">Edinburgh</a>,
-							Gibraltar,
-							Edinburgh,
-							Cardiff,
-							Manchester,
-							Liverpool,
-							Bimingham,
-							Oxford
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        Belgium:
-						        </span>
-		                        		<a href="https://deimusmeister.blogspot.com/2020/04/belgium-brussels.html" class="underline">Brussels</a>,
-		                       			<a href="https://deimusmeister.blogspot.com/2020/04/berlgium.html" class="underline">Bruges</a>,
-							Antwerpen 
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						            <a href="http://deimusmeister.blogspot.de/2012/05/china.html" class="underline">China</a>:
-						        </span>
-						        <a href="http://deimusmeister.blogspot.de/2012/05/china.html" class="underline">Beijing</a>,
-		                        <a href="http://deimusmeister.blogspot.de/2012/06/china-travelling-to-wuhan.html" class="underline">Wuhan</a>,
-		                        Shanghai,
-		                        Suzhou
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        <a href="https://deimusmeister.blogspot.com/2020/04/poland-is-beautiful-country-and-has-lot.html" class="underline">Poland</a>:
-						        </span>
-						        Wrocław
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						            <a href="https://deimusmeister.blogspot.de/2018/01/japan.html" class="underline">Japan</a>:
-						        </span>
-						        Tokyo,
-						        Nagoya,
-						        Takayama,
-						        Kyoto,
-						        Hiroshima,
-						        Miyajima,
-							Osaka
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        <a href="https://deimusmeister.blogspot.com/2020/04/slovakia.html" class="underline">Slovakia</a>:
-						        </span>
-						        Bratislava
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        Slovenia:
-						        </span>
-						        <a href="https://deimusmeister.blogspot.com/2020/04/slovenia.html" class="underline">Ljubljana</a>,
-						        <a href="https://deimusmeister.medium.com/slovenia-bled-f6efe9290bf7" class="underline">Bled</a>
-						        Kranj,
-						        Celje,
-						        Slovenska Bistrica,
-						        Maribor,
-							Kranjska Gora
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        <a href="https://deimusmeister.blogspot.com/2020/04/croatia.html" class="underline">Croatia</a>:
-						        </span>
-						        Zagreb
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        Greece:
-						        </span>
-						        Athens,
-						        Kalabaka/Meteora,
-						        Delphi,
-						        Patras,
-						        Olympia,
-						        Nafplio/Mycenae/Epidaurus,
-						        <a href="http://deimusmeister.blogspot.de/2018/04/greece-thessaloniki.html" class="underline">Thessaloniki</a>
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        <a href="http://deimusmeister.blogspot.de/2018/05/liechteinstein.html" class="underline">Liechtenstein:</a>
-						        </span>
-						        Vaduz,
-						        Mauren,
-						        Schaan,
-						        Balzers
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        United States:
-						        </span>
-						        Boston,
-						        New York,
-						        Philadelphia,
-						        Washington,
-						        <a href="https://deimusmeister.blogspot.com/2019/12/usa-chicago.html" class="underline">Chicago</a>,
-							San Francisco,
-							Santa Clara,
-							Mountain View,
-							Cupertino,
-							San Jose,
-							Redwood,
-							Los Angeles,
-							Santa Monica
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        <a href="https://deimusmeister.blogspot.com/2020/04/latvia-is-very-beautiful-country-most.html" class="underline">Latvia</a>:						        						        
-						        </span>
-						        Riga,
-						        Jūrmala
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        <a href="https://deimusmeister.blogspot.com/2020/04/lithuania.html" class="underline">Lithuania</a>:						        
-						        </span>
-						        Vilnius,
-						        Kaunas
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-								<a href="https://deimusmeister.blogspot.com/2020/01/luxemburg.html" class="underline">Luxembourg</a>
-						        </span>
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        <a href="http://deimusmeister.blogspot.com/2018/02/thailand.html" class="underline">Thailand</a>:
-						        </span>
-						        Bangkok,
-						        Ayutthaya,
-						        Pattaya
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        <a href="http://deimusmeister.blogspot.com/2018/03/vietnam.html" class="underline">Vietnam</a>:
-						        </span>
-						        Hanoi,
-						        Ha Long,
-						        Ninh Binh
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        	<a href="http://deimusmeister.blogspot.de/2018/01/malta.html" class="underline">Malta</a>:
-						        </span>
-						        Valletta,
-						        Mdina,
-						        Rabat,
-						        Marsaxlokk
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        	<a href="https://deimusmeister.blogspot.de/2018/01/portugal-lisbon.html" class="underline">Portugal</a>:
-						        </span>
-						        Lisbon,
-						        Sintra,
-						        Cabo da Roca,
-						        Óbidos,
-						        Alcobaça,
-						        Nazaré,
-						        Figueira da Foz,
-						        Porto,
-							<a href="https://deimusmeister.blogspot.com/2020/09/portugal-braga.html" class="underline">Braga</a>,
-						        Coimbra,
-						        Tomar,
-						        Leiria
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        	<a href="https://deimusmeister.blogspot.de/2018/01/singapore.html" class="underline">Singapore</a>
-						        </span>
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        	<a href="https://deimusmeister.blogspot.de/2018/02/malaysia.html" class="underline">Malaysia</a>:
-						        </span>
-						        Melaka,
-						        Kuala Lumpur
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-							        <a href="https://deimusmeister.blogspot.de/2018/02/indonesia.html " class="underline">Indonesia</a>:
-						        </span>
-						        Bali
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-							        <a href="https://deimusmeister.blogspot.de/2018/01/ireland.html" class="underline">Ireland</a>:
-						        </span>
-						        Dublin,
-						        Cliffs of Moher
-						     </p>
-						  </li>
-		                  <li>
-		                     <p class="body">
-		                        <span class="block-country-city-header">
-							        <a href="https://deimusmeister.blogspot.de/2018/01/andorra.html" class="underline">Andorra</a>:
-		                        </span>
-		                        Andorra la Vella
-		                     </p>
-		                  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-							        <a href="https://deimusmeister.blogspot.de/2018/01/ukraine.html" class="underline">Ukraine</a>:
-						        </span>
-						        Kiev,
-						        Chernihiv
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-							        <a href="http://deimusmeister.blogspot.de/2018/04/bulgaria.html" class="underline">Bulgaria</a>:
-						        </span>
-						        Sofia,
-						        Plovdiv
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-								<a href="https://deimusmeister.blogspot.com/2020/01/vatican.html" class="underline">Vatican City</a>
-						        </span>
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        <a href="http://deimusmeister.blogspot.de/2018/01/san-marino-2017.html" class="underline">San Marino</a>
-						        </span>
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        <a href="http://deimusmeister.blogspot.de/2018/05/monaco.html" class="underline">Monaco</a>
-						        </span>
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        <a href="http://deimusmeister.blogspot.com/2018/06/macedonia.html" class="underline">Macedonia:</a>
-						        </span>
-						        Skopje,
-						        Ohrid
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        <a href="http://deimusmeister.blogspot.com/2018/07/romania.html" class="underline">Romania:</a>
-						        </span>
-						        Iași
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        <a href="http://deimusmeister.blogspot.com/2018/07/moldova.html" class="underline">Moldova:</a>
-						        </span>
-						        Chișinău
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        <a href="http://deimusmeister.blogspot.com/2018/07/cyprus.html" class="underline">Cyprus:</a>
-						        </span>
-						        Larnaca,
-						        Limassol,
-						        Nicosia,
-						        Ayia Napa,
-						        Paphos
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        <a href="https://deimusmeister.blogspot.com/2018/11/finland-helsinki.html" class="underline">Finland:</a>
-						        </span>
-								Helsinki
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        India:
-						        </span>
-						        <a href="https://deimusmeister.blogspot.com/2018/11/india-delhi.html" class="underline">New Delhi</a>,
-						        <a href="https://deimusmeister.blogspot.com/2018/11/india-jaipur.html" class="underline">Jaipur</a>,
-						        <a href="https://deimusmeister.blogspot.com/2018/11/india-agra.html" class="underline">Agra</a>,
-						        <a href="https://deimusmeister.blogspot.com/2018/11/india-varanasi.html" class="underline">Varanasi</a>
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        <a href="https://deimusmeister.blogspot.com/2019/01/montenegro.html" class="underline">Montenegro:</a>
-						        </span>
-								Podgorica,
-								Kotor,
-								Budva
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        <a href="https://deimusmeister.blogspot.com/2019/01/bosnia-and-herzegovina.html" class="underline">Bosnia and Herzegovina:</a>
-						        </span>
-								Mostar,
-							     	Sarajevo
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        <a href="https://deimusmeister.blogspot.com/2019/01/albania.html" class="underline">Albania:</a>
-						        </span>
-								Shkoder
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        <a href="https://deimusmeister.blogspot.com/2019/02/serbia.html" class="underline">Serbia:</a>
-						        </span>
-								Belgrade
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        <a href="https://deimusmeister.blogspot.com/2019/03/israel.html" class="underline">Israel:</a>
-						        </span>
-								Haifa
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        <a href="https://deimusmeister.blogspot.com/2019/05/norway.html" class="underline">Norway:</a>
-						        </span>
-								Oslo
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        <a href="http://deimusmeister.blogspot.com/2019/06/iceland.html" class="underline">Iceland:</a>
-						        </span>
-								Reykjavik,
-								Selfoss,
-								Keflavik
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-								<a href="https://deimusmeister.blogspot.com/2019/08/denmark-copenhagen.html" class="underline">Denmark:</a>
-						        </span>
-						        Copenhagen
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-								<a href="https://deimusmeister.blogspot.com/2019/08/sweden-malmo.html" class="underline">Sweden:</a>
-						        </span>
-						        Malmö,
-							Gothenburg
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-								<a href="https://deimusmeister.blogspot.com/2019/09/estonia.html" class="underline">Estonia:</a>
-						        </span>
-						        Tallinn
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-								<a href="https://deimusmeister.blogspot.com/2019/10/mexico.html" class="underline">Mexico:</a>
-						        </span>
-						        Cancun,
-						        Merida,
-						        Chichen Itza
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-								<a href="https://deimusmeister.blogspot.com/2019/11/belarus.html" class="underline">Belarus:</a>
-						        </span>
-                                Minsk
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        <a href="https://deimusmeister.blogspot.com/2020/03/turkey.html" class="underline">Turkey:</a>
-						        </span>
-                                Istanbul
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        South Africa:
-						        </span>
-							<a href="https://deimusmeister.medium.com/south-africa-johannesburg-a827e402d9e3" class="underline">Johannesburg</a>,
-							Pretoria,
-							<a href="https://deimusmeister.medium.com/south-africa-port-elizabeth-4f9821689c3" class="underline">Port Elizabeth</a>,
-							<a href="https://deimusmeister.medium.com/south-africa-knysna-150386f0098c" class="underline">Knysna</a>,
-							<a href="https://deimusmeister.medium.com/south-africa-george-8fca363cdda0" class="underline">George</a>,
-							<a href="https://deimusmeister.medium.com/south-africa-oudtshoorn-55971edb442" class="underline">Oudtshoorn</a>,
-							Mossel Bay,
-							Riversdale,
-							Swellendam,
-						        <a href="https://deimusmeister.medium.com/south-africa-elim-ae0799ee302e" class="underline">Elim</a>,
-							Cape Agulhas,
-							Cape Town
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        Namibia:
-						        </span>
-							Windhoek,
-							Sossusvlei,
-							Solitaire,
-							Walwis Bay,
-							Swakopmund
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        Tunisia:
-						        </span>
-							Tunis,
-							<a href="https://deimusmeister.medium.com/tunisia-kairouan-90c26c13085" class="underline">Kairouan</a>,
-    						        <a href="https://deimusmeister.medium.com/tunisia-el-jem-c89bc1a829ff" class="underline">El Jem</a>,
-							<a href="https://deimusmeister.medium.com/tunisia-mahdia-f3ef88f7f072" class="underline">Mahdia</a>,
-							Soussa,
-							Hammamet,
-							Sidi Bou Said,
-							Carthage
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        Jordan:
-						        </span>
-							<a href="https://deimusmeister.medium.com/jordan-amman-851170e5369a" class="underline">Amman</a>,
-							Kerak,
-						        <a href="https://deimusmeister.medium.com/jordan-wadi-musa-d22b20b89474" class="underline">Wadi Musa</a>,
-							Petra,
-						     	<a href="https://deimusmeister.medium.com/jordan-dead-sea-1818e276043a" class="underline">Dead Sea</a>,
-							<a href="https://deimusmeister.medium.com/jordan-madaba-a0e6acd5688b" class="underline">Madaba</a>,
-							Jerash,
-							As-Salt
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        Morocco:
-						        </span>
-							Fes,
-							Rabat,
-							Casablanca,
-							Marrakesh,
-							Agadir
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        Kazakhstan:
-						        </span>
-							Almaty
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        Kyrgyzstan:
-						        </span>
-							Bishkek
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        Bahrain:
-						        </span>
-							Manama
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        Australia:
-						        </span>
-							Sydney,
-							Menly
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        Oman:
-						        </span>
-							Muscat
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        Saudi Arabia:
-						        </span>
-							Riyadh,
-							Dammam,
-							Khober
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        Kuwait:
-						        </span>
-							Kuwait City
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        Egypt:
-						        </span>
-							Alexandria
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        Maldives:
-						        </span>
-							Male,
-							Hulumale,
-							Villingili
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        Uzbekistan:
-						        </span>
-							Tashkent,
-						    	Samarkand
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        New Zealand:
-						        </span>
-							Auckland
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        Qatar:
-						        </span>
-							<a href="https://deimusmeister.blogspot.com/2023/10/doha-katar.html" class="underline">Doha</a>,
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        Tanzania:
-						        </span>
-							Dar Es Salam,
-							Zanzibar
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        Kenya:
-						        </span>
-							Nairobi
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        Kosovo:
-						        </span>
-							Prishtina
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        South Korea:
-						        </span>
-							Seoul,
-							Busan
-						     </p>
-						  </li>
-						  <li>
-						     <p class="body">
-						        <span class="block-country-city-header">
-						        Fiji:
-						        </span>
-							Nadi,
-							Sigatoka,
-							Korovisilou,
-							Suva
-						     </p>
-						  </li>
-		               </ol>
-		               </ol>
-		            </div>
-		         </td>
-		      </tr>
-		   </tbody>
-		</table>
-        
-    </body>
-
+   <head>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-11885304-3"></script>
+      <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         
+         gtag('config', 'UA-11885304-3');
+      </script>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <title>Expeditions Map</title>
+      <link rel="stylesheet" href="./ammap/ammap.css" type="text/css">
+      <script src="./ammap/ammap.js" type="text/javascript"></script>
+      <!-- map file should be included after ammap.js -->
+      <script src="./ammap/maps/js/worldHigh.js" type="text/javascript"></script>
+      <script>
+         var map;
+         
+         AmCharts.ready(function() {
+             map = new AmCharts.AmMap();
+         
+         
+             var dataProvider = {
+                 mapVar: AmCharts.maps.worldHigh,
+                 //zoomLevel: 0.5,
+                 //zoomLongitude: 10,
+                 //zoomLatitude: 52
+             };
+         
+                      
+             map.areasSettings = {
+                          color: "#EDAFB0",
+                 unlistedAreasColor: "#FFFFFF",
+                          unlistedAreasOutlineColor: "#272C2F",
+                          outlineColor: "#272C2F",
+                          outlineThickness: 0.5,
+                 rollOverOutlineColor: "#272C2F",
+                 rollOverColor: "#CC0000",
+                 balloonText: "[[title]] visited in [[customData]]"
+             };
+         
+             map.creditsPosition = "top-right";
+                      
+                      map.dragMap = false;
+                      map.zoomOnDoubleClick = false;
+                      map.zoomControl = {
+                          zoomControlEnabled: false,
+                          panControlEnabled: false,
+                          homeButtonEnabled: false
+                      };
+         
+         
+             dataProvider.areas = [
+                      {
+                          title: "Armenia",
+                          id: "AM",
+                          customData: "1987 (born :) )"},
+                      {
+                 title: "Russia",
+                 id: "RU",
+                 customData: "2009"},
+             {
+                 title: "Georgia",
+                 id: "GE",
+                 customData: "2009"},
+             {
+                 title: "Germany",
+                 id: "DE",
+                 customData: "2010"},
+             {
+                 title: "Austria",
+                 id: "AT",
+                 customData: "2010"},
+                      {
+                          title: "Netherlands",
+                          id: "NL",
+                          customData: "2010"},
+                      {
+                          title: "France",
+                          id: "FR",
+                          customData: "2010"},
+             {
+                 title: "Italy",
+                 id: "IT",
+                 customData: "2010"},
+                      {
+                          title: "Czechia (Czech Republic)",
+                          id: "CZ",
+                          customData: "2010"},
+             {
+                 title: "United Arab Emirates",
+                 id: "AE",
+                 customData: "2010"},
+                      {
+                          title: "Hungary",
+                          id: "HU",
+                          customData: "2011"},
+             {
+                 title: "Switzerland",
+                 id: "CH",
+                 customData: "2011"},
+             {
+                 title: "Spain",
+                 id: "ES",
+                 customData: "2011"},
+             {
+                 title: "United Kingdom",
+                 id: "GB",
+                 customData: "2012"},
+                      {
+                          title: "Belgium",
+                          id: "BE",
+                          customData: "2012"},
+             {
+                 title: "China",
+                 id: "CN",
+                 customData: "2012"},
+             {
+                 title: "Poland",
+                 id: "PL",
+                 customData: "2013"},
+             {
+                 title: "Japan",
+                 id: "JP",
+                 customData: "2014"},
+                      {
+                          title: "Slovakia",
+                          id: "SK",
+                          customData: "2014"},
+                      {
+                          title: "Slovenia",
+                          id: "SI",
+                          customData: "2015"},
+                      {
+                          title: "Croatia",
+                          id: "HR",
+                          customData: "2015"},
+                      {
+                          title: "Greece",
+                          id: "GR",
+                          customData: "2015"},
+                      {
+                          title: "Liechtenstein",
+                          id: "LI",
+                          customData: "2015"},
+                      {
+                          title: "United States",
+                          id: "US",
+                          customData: "2015"},
+             {
+                 title: "Latvia",
+                 id: "LV",
+                 customData: "2016"},
+             {
+                 title: "Lithuania",
+                 id: "LT",
+                 customData: "2016"},
+             {
+                 title: "Luxembourg",
+                 id: "LU",
+                 customData: "2016"},
+                      {
+                          title: "Thailand",
+                          id: "TH",
+                          customData: "2016"},
+                      {
+                          title: "Vietnam",
+                          id: "VN",
+                          customData: "2016"},
+             {
+                 title: "Malta",
+                 id: "MT",
+                 customData: "2017"},
+             {
+                 title: "Portugal",
+                 id: "PT",
+                 customData: "2017"},
+                      {
+                          title: "Singapore",
+                          id: "SG",
+                          customData: "2017"},
+                      {
+                          title: "Malaysia",
+                          id: "MY",
+                          customData: "2017"},
+                      {
+                          title: "Indonesia",
+                          id: "ID",
+                          customData: "2017"},
+             {
+                 title: "Ireland",
+                 id: "IE",
+                 customData: "2017"},
+             {
+                 title: "Andorra",
+                 id: "AD",
+                 customData: "2017"},
+             {
+                 title: "San Marino",
+                 id: "SM",
+                 customData: "2017"},
+                      {
+                          title: "Ukraine",
+                          id: "UA",
+                          customData: "2017"},
+                      {
+                          title: "Bulgaria",
+                          id: "BG",
+                          customData: "2018"},
+         	{
+                          title: "Monaco",
+                          id: "MC",
+                          customData: "2018"},
+         	{
+                          title: "Macedonia",
+                          id: "MK",
+                          customData: "2018"},
+         	{
+                          title: "Romania",
+                          id: "RO",
+                          customData: "2018"},
+         	{
+                          title: "Moldova",
+                          id: "MD",
+                          customData: "2018"},
+         	{
+                          title: "Cyprus",
+                          id: "CY",
+                          customData: "2018"},
+         	{
+                          title: "Finland",
+                          id: "FI",
+                          customData: "2018"},
+         	{
+                          title: "India",
+                          id: "IN",
+                          customData: "2018"},
+         	{
+                          title: "Montenegro",
+                          id: "ME",
+                          customData: "2018"},
+         	{
+                          title: "Bosnia and Herzegovina",
+                          id: "BA",
+                          customData: "2018"},
+         	{
+                          title: "Albania",
+                          id: "AL",
+                          customData: "2018"},
+         	{
+         		title: "Kosovo",
+         		id: "XK", 
+         		customData: "2023",
+         		balloonText: ""},
+         	{
+         		title: "Serbia",
+         		id: "RS",
+         		customData: "2019"
+         		},
+         	{
+         		title: "Israel",
+         		id: "IL",
+         		customData: "2019"
+         		},
+         	{
+         		title: "Norway",
+         		id: "NO",
+         		customData: "2019"
+         		},
+         	{
+         		title: "Iceland",
+         		id: "IS",
+         		customData: "2019"
+         		},
+         	{
+         		title: "Denmark",
+         		id: "DK",
+         		customData: "2019"
+         		},
+         	{
+         		title: "Sweden",
+         		id: "SE",
+         		customData: "2019"
+         		},
+         	{
+         		title: "Estonia",
+         		id: "EE",
+         		customData: "2019"
+         		},
+         	{
+         		title: "Mexico",
+         		id: "MX",
+         		customData: "2019"
+         		},
+         	{
+         		title: "Belarus",
+         		id: "BY",
+         		customData: "2019"
+         		},
+         	{
+         		title: "Turkey",
+         		id: "TR",
+         		customData: "2020"
+         		},
+         	{
+         		title: "South Africa",
+         		id: "ZA",
+         		customData: "2021"
+         		},
+         	{
+         		title: "Namibia",
+         		id: "NA",
+         		customData: "2021"
+         		},
+         	{
+         		title: "Tunisia",
+         		id: "TN",
+         		customData: "2021"
+         		},
+         	{
+         		title: "Jordan",
+         		id: "JO",
+         		customData: "2022"
+         		},
+         	{
+         		title: "Morocco",
+         		id: "MA",
+         		customData: "2022"
+         		},
+         	{
+         		title: "Kazakhstan",
+         		id: "KZ",
+         		customData: "2022"
+         		},
+         	{
+         		title: "Kyrgyzstan",
+         		id: "KG",
+         		customData: "2022"
+         		},
+         	{
+         		title: "Bahrain",
+         		id: "BH",
+         		customData: "2022"
+         		},
+         	{
+         		title: "Australia",
+         		id: "AU",
+         		customData: "2022"
+         		},
+         	{
+         		title: "Oman",
+         		id: "OM",
+         		customData: "2022"
+         		},
+         	{
+         		title: "Saudi Arabia",
+         		id: "SA",
+         		customData: "2022"
+         		},
+         	{
+         		title: "Kuwait",
+         		id: "KW",
+         		customData: "2022"
+         		},
+         	{
+         		title: "Egypt",
+         		id: "EG",
+         		customData: "2022"
+         		},
+         	{
+         		title: "Maldives",
+         		id: "MV",
+         		customData: "2023"
+         		},
+         	{
+         		title: "Uzbekistan",
+         		id: "UZ",
+         		customData: "2023"
+         		},
+                 {
+         		title: "New Zealand",
+         		id: "NZ",
+         		customData: "2023"
+         		},
+         	{
+         		title: "Qatar",
+         		id: "QA",
+         		customData: "2023"
+         		},
+                 {
+         		title: "Tanzania",
+         		id: "TZ",
+         		customData: "2023"
+         		},
+                 {
+         		title: "Kenya",
+         		id: "KE",
+         		customData: "2023"
+         		},
+                 {
+         		title: "South Korea",
+         		id: "KR",
+         		customData: "2023"
+         		},
+                 {
+         		title: "Fiji",
+         		id: "FJ",
+         		customData: "2023"
+         		},
+            ];
+         
+             map.dataProvider = dataProvider;
+         
+             var legend = {
+                 width: 600,
+                 backgroundAlpha: 0.5,
+                 backgroundColor: "#FFFFFF",
+                 borderColor: "#666666",
+                 borderAlpha: 1,
+                 bottom: 15,
+                 left: 15,
+                 horizontalGap: 10,
+                 data: [
+                     {
+                     title: "Joined EU before 2004",
+                     color: "#3366CC"},
+                 {
+                     title: "Joined EU at 2004",
+                     color: "#FFCC33"},
+                 {
+                     title: "Joined EU at 2007",
+                     color: "#66CC99"}
+                 ]
+             };
+         
+             //map.addLegend(legend);
+             map.write("mapdiv");
+         
+         });
+         
+              
+      </script>
+      <link rel="stylesheet" type="text/css" href="main.css">
+      <link rel="stylesheet" type="text/css" href="links.css">
+      <link rel="stylesheet" type="text/css" href="travel.css">
+   </head>
+   <body>
+      <div style="margin-left:15px; margin-top:15px; margin-bottom:25px">
+         <h1 lang="en" style="" class="main_title">Expeditions Map</h1>
+      </div>
+      <div id="mapdiv" style="width: 99%; background-color:#c4efff; height: 700px; border: 0.5px solid #000; border-radius: 5px; -moz-border-radius: 5px;"></div>
+      <table class="main-table" cellpadding="15">
+         <tbody>
+            <tr>
+               <td>
+                  <div lang="en">
+                     <ol class="block-country-city">
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                                 <!-- 
+                                    <a href="./soon/index.html" class="underline">Armenia</a>:
+                                    </span>
+                                    <a href="./soon/index.html#gagry" class="underline">Gyumri</a>,
+                                    <a href="./soon/index.html#gudauta" class="underline">Yerevan</a>
+                                    -->
+                                 Armenia:
+                              </span>
+                              <a href="https://deimusmeister.blogspot.com/2018/08/armenia-gyumri.html" class="underline">Gyumri</a>,
+                              <a href="https://deimusmeister.blogspot.com/2018/08/armenia-yerevan.html" class="underline">Yerevan</a>
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              Russia:
+                              </span>
+                              Moscow,
+                              Dimitrov
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              Georgia:
+                              </span>
+                              Tbilisi,
+                              Sighnaghi,
+                              Mtskheta
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              Germany:
+                              </span>
+                              Munich,
+                              <a href="https://deimusmeister.blogspot.com/2019/12/gerlin-berlin.html" class="underline">Berlin</a>,
+                              Köln,
+                              Bonn,
+                              Dresden,
+                              Leipzig,
+                              Chemnitz,
+                              Hamburg,
+                              Stuttgart,
+                              Ulm,
+                              Frankfurt am Main,
+                              Karlsruhe,
+                              Augsburg,
+                              <a href="https://deimusmeister.blogspot.com/2020/03/germany-nuremberg.html" class="underline">Nurmberg</a>,
+                              Landsberg am Lech,
+                              Starnberg,
+                              Rosenheim,
+                              <a href="https://deimusmeister.blogspot.com/2020/08/germany-fussen.html" class="underline">Füssen</a>,
+                              <a href="https://deimusmeister.blogspot.com/2020/07/germany-murnau-am-staffelsee.html" class="underline">Murnau am Staffelsee</a>,
+                              <a href="https://deimusmeister.blogspot.com/2020/07/germany-garmisch-partenkirchen.html" class="underline">Garmisch Parterkirchen</a>,
+                              Konstanz,
+                              Apolda,
+                              Jena,
+                              Erfurt,
+                              Weimar,
+                              Magdeburg,
+                              Bamberg,
+                              Furstenfeldbruck,
+                              <a href="https://deimusmeister.blogspot.de/2018/03/germany-landshut.html" class="underline">Landshut</a>,
+                              Rostock,
+                              <a href="http://deimusmeister.blogspot.com/2020/06/germany-dingolfing.html" class="underline">Dingolfing</a>,
+                              <a href="https://deimusmeister.blogspot.com/2020/07/germany-markt-schwaben.html" class="underline">Markt Schwaben</a>,
+                              <a href="https://deimusmeister.blogspot.com/2020/07/germany.html" class="underline">Ebersberg</a>,
+                              <a href="https://deimusmeister.blogspot.com/2020/07/grafing-is-small-town-near-munich-in.html" class="underline">Grafing</a>,
+                              <a href="https://deimusmeister.blogspot.com/2020/07/germany-rothenburg-ob-der-tauber.html" class="underline">Rothenburg ob Tauber</a>,
+                              <a href="https://deimusmeister.blogspot.com/2020/07/germany-wurzburg.html" class="underline">Würzburg</a>,
+                              <a href="https://deimusmeister.blogspot.com/2020/08/germany-wasserburg-am-inn.html" class="underline">Wasserburg am Inn</a>,
+                              <a href="https://deimusmeister.blogspot.com/2020/08/germany-haag-in-oberbayern.html" class="underline">Haag in Oberbayern</a>,
+                              <a href="https://deimusmeister.blogspot.com/2020/08/germany-holzkirchen.html" class="underline">Holzkirchen</a>,
+                              <a href="https://deimusmeister.blogspot.com/2020/08/germany-bad-tolz.html" class="underline">Bad Tölz</a>,
+                              <a href="https://deimusmeister.blogspot.com/2020/08/germany-wolfsrathausen.html" class="underline">Wolfsrathausen</a>,
+                              <a href="https://deimusmeister.blogspot.com/2020/08/germany-lindau.html" class="underline">Lindau</a>,
+                              Kaufbeuren, 
+                              Kempten,
+                              Baden Baden,
+                              Freiburg,
+                              Inn am Ammersee,
+                              Aying,
+                              Feldkirchen-Westerham,
+                              Bad Aibling,
+                              Herrsching,
+                              Weilheim im Oberbayern,
+                              Pfaffenhofen an der Ilm,
+                              Ingolstadt,
+                              Neuburg an der Donau,
+                              Allersberg,
+                              Fürth,
+                              Erlangen,
+                              Landau an der Isar,
+                              Straubing,
+                              Deggendorf,
+                              Nördlingen,
+                              Dinkelsbühl,
+                              Moosburg,
+                              Altomünster,
+                              Riem,
+                              <a href="https://deimusmeister.medium.com/germany-kissing-abec9c2ccabd" class="underline">Kissing</a>
+                              Aichach,
+                              Frieberg,
+                              Dorfen,
+                              Waldkraiburg,
+                              Mühldorf,
+                              Neuötting,
+                              Altötting,
+                              Burghausen,
+                              Traunstein,
+                              Bad Reichenhall, 
+                              Berchtesgaden,
+                              Donauwörth,
+                              Weißenburg in Bayern,
+                              Mainburg,
+                              Schwandorf,
+                              Amberg,
+                              Bayreuth,
+                              Buchloe,
+                              Mindelheim,
+                              Ottobeuren,
+                              Denkendorf,
+                              Eichstätt,
+                              Roth,
+                              Schwabach,
+                              Ansbach,
+                              Günzburg,
+                              Laupheim,
+                              Biberach,
+                              Neufarhn bei Freising,
+                              Scheyern,
+                              Markt Indersdorf,
+                              Mannheim,
+                              Heidelberg,
+                              Keiserslautern,
+                              Saarbruecken,
+                              Bochum,
+                              Düsseldorf,
+                              Kettwig,
+                              Essen,
+                              Aachen,
+                              Beilingriss,
+                              Kulmbach,
+                              Berching,
+                              Hof,
+                              Weiden,
+                              Kelheim,
+                              Markt Essig,
+                              Riedenburg,
+                              Gröbenzell,
+                              Schondorf.
+                              Puchheim,
+                              Oberschleissheim,
+                              Rottenbuch,
+                              Pörnbach
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              Austria:
+                              </span>
+                              Vienna,
+                              Salzbourg,
+                              Linz,
+                              Innsbruck,
+                              Ischgl,
+                              <a href="https://deimusmeister.blogspot.com/2019/08/austria-villach.html" class="underline">Villach</a>,
+                              Klagenfurt,
+                              Golling,
+                              Hallein,
+                              Sankt Michael,
+                              Flachau,
+                              Gmund,
+                              <a href="https://deimusmeister.blogspot.com/2018/05/austira-hallstatt.html" class="underline">Hallstatt</a>,
+                              Velden am Wörthersee,
+                              Graz,
+                              Meerauge,
+                              Ferlach,
+                              Spittal,
+                              Radstadt,
+                              Bischofshofen, 
+                              Sant Johann im Pongau, 
+                              Millstatt am See, 
+                              Alternmarkt,
+                              Feldkirch
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              Netherlands:
+                              </span>
+                              <a href="http://deimusmeister.blogspot.com/2020/05/netherland-amsterdam.html" class="underline">Amsterdam</a>,
+                              Utrecht,
+                              The Hague,
+                              Delft,
+                              Rotterdam,
+                              Kinderdijk,
+                              Eindhoven,
+                              Maastricht
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              France:
+                              </span>
+                              Paris,
+                              Saint-Genis-Pouilly,
+                              <a href="http://deimusmeister.blogspot.de/2018/05/france-menton.html" class="underline">Menton</a>,
+                              <a href="http://deimusmeister.blogspot.de/2018/05/frace-nice.html" class="underline">Nice</a>,
+                              <a href="http://deimusmeister.blogspot.de/2018/05/france-cannes.html" class="underline">Cannes</a>
+                              Strasbourg,
+                              Obernai,
+                              Mittelberg,
+                              Ribeauvillé,
+                              Riquewihr,
+                              Kayserberg,
+                              Colmar,
+                              Caen,
+                              Omaha Beach,
+                              Mont Saint-Michel,
+                              Saint-Lô,
+                              Valbonne
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              Italy:
+                              </span>
+                              Rome,
+                              <a href="http://deimusmeister.blogspot.de/2018/05/italy-milan.html" class="underline">Milan</a>,
+                              Turin,
+                              Verona,
+                              Bologna,
+                              Genoa,
+                              Portofino,
+                              Florence,
+                              Pisa,
+                              Maranello,
+                              Sant'Agata Bolognese,
+                              Venice,
+                              Padua,
+                              <a href="https://deimusmeister.blogspot.com/2020/03/italy-bergamo.html" class="underline">Bergamo</a>,					        
+                              Brescia,
+                              <a href="http://deimusmeister.blogspot.de/2018/05/italy-celle-ligure.html" class="underline">Celle Ligure</a>,					        
+                              Udine,
+                              Rimini,
+                              Rovereto,
+                              Modena,
+                              Trento,
+                              Tarvisio,
+                              <a href="https://deimusmeister.medium.com/trieste-69fe91fa26ff" class="underline">Trieste</a>,
+                              Pompei,
+                              Siena,
+                              Lucca,
+                              Bolzano,
+                              Merano
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              Czechia (Czech Republic):
+                              </span>
+                              Prague,
+                              Pilsen,
+                              České Budějovice,
+                              <a href="https://deimusmeister.blogspot.com/2020/06/cesky-krumlov.html" class="underline">Český Krumlov</a>,
+                              Cheb,
+                              Karlovy Vary,
+                              Klatovy
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              United Arab Emirates:
+                              </span>
+                              <a href="http://deimusmeister.blogspot.com/2020/05/emirates-dubai.html" class="underline">Dubai</a>,
+                              Abu Dhabi
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="http://deimusmeister.blogspot.com/2020/05/hungary-budapest.html" class="underline">Hungary</a>:
+                              </span>
+                              Budapest
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              Switzerland:
+                              </span>
+                              Zurich,
+                              Bern,
+                              Luzern,
+                              <a href="http://deimusmeister.blogspot.com/2013/01/geneva.html" class="underline">Geneva</a>,
+                              Lausanne,
+                              Montreux,
+                              Fribourg,
+                              Chur,
+                              Davos,
+                              St Moritz,
+                              Zermatt
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              Spain:
+                              </span>
+                              Madrid,
+                              Toledo,
+                              <a href="https://deimusmeister.blogspot.com/2020/04/spain-barcelona.html" class="underline">Barcelona</a>,
+                              Valencia,
+                              Zaragoza,
+                              Mallorca,
+                              Seville, 
+                              Cordoba,
+                              Malaga,
+                              Algeciras,
+                              Grenada,
+                              Tarragona,
+			      Vilanova,
+			      Sitges
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              United Kingdom:
+                              </span>
+                              London,
+                              <a href="https://deimusmeister.blogspot.com/2018/10/scotland-edinburgh.html" class="underline">Edinburgh</a>,
+                              Gibraltar,
+                              Edinburgh,
+                              Cardiff,
+                              Manchester,
+                              Liverpool,
+                              Bimingham,
+                              Oxford
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              Belgium:
+                              </span>
+                              <a href="https://deimusmeister.blogspot.com/2020/04/belgium-brussels.html" class="underline">Brussels</a>,
+                              <a href="https://deimusmeister.blogspot.com/2020/04/berlgium.html" class="underline">Bruges</a>,
+                              Antwerpen 
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="http://deimusmeister.blogspot.de/2012/05/china.html" class="underline">China</a>:
+                              </span>
+                              <a href="http://deimusmeister.blogspot.de/2012/05/china.html" class="underline">Beijing</a>,
+                              <a href="http://deimusmeister.blogspot.de/2012/06/china-travelling-to-wuhan.html" class="underline">Wuhan</a>,
+                              Shanghai,
+                              Suzhou
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="https://deimusmeister.blogspot.com/2020/04/poland-is-beautiful-country-and-has-lot.html" class="underline">Poland</a>:
+                              </span>
+                              Wrocław
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="https://deimusmeister.blogspot.de/2018/01/japan.html" class="underline">Japan</a>:
+                              </span>
+                              Tokyo,
+                              Nagoya,
+                              Takayama,
+                              Kyoto,
+                              Hiroshima,
+                              Miyajima,
+                              Osaka
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="https://deimusmeister.blogspot.com/2020/04/slovakia.html" class="underline">Slovakia</a>:
+                              </span>
+                              Bratislava
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              Slovenia:
+                              </span>
+                              <a href="https://deimusmeister.blogspot.com/2020/04/slovenia.html" class="underline">Ljubljana</a>,
+                              <a href="https://deimusmeister.medium.com/slovenia-bled-f6efe9290bf7" class="underline">Bled</a>
+                              Kranj,
+                              Celje,
+                              Slovenska Bistrica,
+                              Maribor,
+                              Kranjska Gora
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="https://deimusmeister.blogspot.com/2020/04/croatia.html" class="underline">Croatia</a>:
+                              </span>
+                              Zagreb
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              Greece:
+                              </span>
+                              Athens,
+                              Kalabaka/Meteora,
+                              Delphi,
+                              Patras,
+                              Olympia,
+                              Nafplio/Mycenae/Epidaurus,
+                              <a href="http://deimusmeister.blogspot.de/2018/04/greece-thessaloniki.html" class="underline">Thessaloniki</a>
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="http://deimusmeister.blogspot.de/2018/05/liechteinstein.html" class="underline">Liechtenstein:</a>
+                              </span>
+                              Vaduz,
+                              Mauren,
+                              Schaan,
+                              Balzers
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              United States:
+                              </span>
+                              Boston,
+                              New York,
+                              Philadelphia,
+                              Washington,
+                              <a href="https://deimusmeister.blogspot.com/2019/12/usa-chicago.html" class="underline">Chicago</a>,
+                              San Francisco,
+                              Santa Clara,
+                              Mountain View,
+                              Cupertino,
+                              San Jose,
+                              Redwood,
+                              Los Angeles,
+                              Santa Monica
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="https://deimusmeister.blogspot.com/2020/04/latvia-is-very-beautiful-country-most.html" class="underline">Latvia</a>:						        						        
+                              </span>
+                              Riga,
+                              Jūrmala
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="https://deimusmeister.blogspot.com/2020/04/lithuania.html" class="underline">Lithuania</a>:						        
+                              </span>
+                              Vilnius,
+                              Kaunas
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="https://deimusmeister.blogspot.com/2020/01/luxemburg.html" class="underline">Luxembourg</a>
+                              </span>
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="http://deimusmeister.blogspot.com/2018/02/thailand.html" class="underline">Thailand</a>:
+                              </span>
+                              Bangkok,
+                              Ayutthaya,
+                              Pattaya
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="http://deimusmeister.blogspot.com/2018/03/vietnam.html" class="underline">Vietnam</a>:
+                              </span>
+                              Hanoi,
+                              Ha Long,
+                              Ninh Binh
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="http://deimusmeister.blogspot.de/2018/01/malta.html" class="underline">Malta</a>:
+                              </span>
+                              Valletta,
+                              Mdina,
+                              Rabat,
+                              Marsaxlokk
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="https://deimusmeister.blogspot.de/2018/01/portugal-lisbon.html" class="underline">Portugal</a>:
+                              </span>
+                              Lisbon,
+                              Sintra,
+                              Cabo da Roca,
+                              Óbidos,
+                              Alcobaça,
+                              Nazaré,
+                              Figueira da Foz,
+                              Porto,
+                              <a href="https://deimusmeister.blogspot.com/2020/09/portugal-braga.html" class="underline">Braga</a>,
+                              Coimbra,
+                              Tomar,
+                              Leiria
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="https://deimusmeister.blogspot.de/2018/01/singapore.html" class="underline">Singapore</a>
+                              </span>
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="https://deimusmeister.blogspot.de/2018/02/malaysia.html" class="underline">Malaysia</a>:
+                              </span>
+                              Melaka,
+                              Kuala Lumpur
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="https://deimusmeister.blogspot.de/2018/02/indonesia.html " class="underline">Indonesia</a>:
+                              </span>
+                              Bali
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="https://deimusmeister.blogspot.de/2018/01/ireland.html" class="underline">Ireland</a>:
+                              </span>
+                              Dublin,
+                              Cliffs of Moher
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="https://deimusmeister.blogspot.de/2018/01/andorra.html" class="underline">Andorra</a>:
+                              </span>
+                              Andorra la Vella
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="https://deimusmeister.blogspot.de/2018/01/ukraine.html" class="underline">Ukraine</a>:
+                              </span>
+                              Kiev,
+                              Chernihiv
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="http://deimusmeister.blogspot.de/2018/04/bulgaria.html" class="underline">Bulgaria</a>:
+                              </span>
+                              Sofia,
+                              Plovdiv
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="https://deimusmeister.blogspot.com/2020/01/vatican.html" class="underline">Vatican City</a>
+                              </span>
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="http://deimusmeister.blogspot.de/2018/01/san-marino-2017.html" class="underline">San Marino</a>
+                              </span>
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="http://deimusmeister.blogspot.de/2018/05/monaco.html" class="underline">Monaco</a>
+                              </span>
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="http://deimusmeister.blogspot.com/2018/06/macedonia.html" class="underline">Macedonia:</a>
+                              </span>
+                              Skopje,
+                              Ohrid
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="http://deimusmeister.blogspot.com/2018/07/romania.html" class="underline">Romania:</a>
+                              </span>
+                              Iași
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="http://deimusmeister.blogspot.com/2018/07/moldova.html" class="underline">Moldova:</a>
+                              </span>
+                              Chișinău
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="http://deimusmeister.blogspot.com/2018/07/cyprus.html" class="underline">Cyprus:</a>
+                              </span>
+                              Larnaca,
+                              Limassol,
+                              Nicosia,
+                              Ayia Napa,
+                              Paphos
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="https://deimusmeister.blogspot.com/2018/11/finland-helsinki.html" class="underline">Finland:</a>
+                              </span>
+                              Helsinki
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              India:
+                              </span>
+                              <a href="https://deimusmeister.blogspot.com/2018/11/india-delhi.html" class="underline">New Delhi</a>,
+                              <a href="https://deimusmeister.blogspot.com/2018/11/india-jaipur.html" class="underline">Jaipur</a>,
+                              <a href="https://deimusmeister.blogspot.com/2018/11/india-agra.html" class="underline">Agra</a>,
+                              <a href="https://deimusmeister.blogspot.com/2018/11/india-varanasi.html" class="underline">Varanasi</a>
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="https://deimusmeister.blogspot.com/2019/01/montenegro.html" class="underline">Montenegro:</a>
+                              </span>
+                              Podgorica,
+                              Kotor,
+                              Budva
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="https://deimusmeister.blogspot.com/2019/01/bosnia-and-herzegovina.html" class="underline">Bosnia and Herzegovina:</a>
+                              </span>
+                              Mostar,
+                              Sarajevo
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="https://deimusmeister.blogspot.com/2019/01/albania.html" class="underline">Albania:</a>
+                              </span>
+                              Shkoder
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="https://deimusmeister.blogspot.com/2019/02/serbia.html" class="underline">Serbia:</a>
+                              </span>
+                              Belgrade
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="https://deimusmeister.blogspot.com/2019/03/israel.html" class="underline">Israel:</a>
+                              </span>
+                              Haifa
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="https://deimusmeister.blogspot.com/2019/05/norway.html" class="underline">Norway:</a>
+                              </span>
+                              Oslo
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="http://deimusmeister.blogspot.com/2019/06/iceland.html" class="underline">Iceland:</a>
+                              </span>
+                              Reykjavik,
+                              Selfoss,
+                              Keflavik
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="https://deimusmeister.blogspot.com/2019/08/denmark-copenhagen.html" class="underline">Denmark:</a>
+                              </span>
+                              Copenhagen
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="https://deimusmeister.blogspot.com/2019/08/sweden-malmo.html" class="underline">Sweden:</a>
+                              </span>
+                              Malmö,
+                              Gothenburg
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="https://deimusmeister.blogspot.com/2019/09/estonia.html" class="underline">Estonia:</a>
+                              </span>
+                              Tallinn
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="https://deimusmeister.blogspot.com/2019/10/mexico.html" class="underline">Mexico:</a>
+                              </span>
+                              Cancun,
+                              Merida,
+                              Chichen Itza
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="https://deimusmeister.blogspot.com/2019/11/belarus.html" class="underline">Belarus:</a>
+                              </span>
+                              Minsk
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              <a href="https://deimusmeister.blogspot.com/2020/03/turkey.html" class="underline">Turkey:</a>
+                              </span>
+                              Istanbul
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              South Africa:
+                              </span>
+                              <a href="https://deimusmeister.medium.com/south-africa-johannesburg-a827e402d9e3" class="underline">Johannesburg</a>,
+                              Pretoria,
+                              <a href="https://deimusmeister.medium.com/south-africa-port-elizabeth-4f9821689c3" class="underline">Port Elizabeth</a>,
+                              <a href="https://deimusmeister.medium.com/south-africa-knysna-150386f0098c" class="underline">Knysna</a>,
+                              <a href="https://deimusmeister.medium.com/south-africa-george-8fca363cdda0" class="underline">George</a>,
+                              <a href="https://deimusmeister.medium.com/south-africa-oudtshoorn-55971edb442" class="underline">Oudtshoorn</a>,
+                              Mossel Bay,
+                              Riversdale,
+                              Swellendam,
+                              <a href="https://deimusmeister.medium.com/south-africa-elim-ae0799ee302e" class="underline">Elim</a>,
+                              Cape Agulhas,
+                              Cape Town
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              Namibia:
+                              </span>
+                              Windhoek,
+                              Sossusvlei,
+                              Solitaire,
+                              Walwis Bay,
+                              Swakopmund
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              Tunisia:
+                              </span>
+                              Tunis,
+                              <a href="https://deimusmeister.medium.com/tunisia-kairouan-90c26c13085" class="underline">Kairouan</a>,
+                              <a href="https://deimusmeister.medium.com/tunisia-el-jem-c89bc1a829ff" class="underline">El Jem</a>,
+                              <a href="https://deimusmeister.medium.com/tunisia-mahdia-f3ef88f7f072" class="underline">Mahdia</a>,
+                              Soussa,
+                              Hammamet,
+                              Sidi Bou Said,
+                              Carthage
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              Jordan:
+                              </span>
+                              <a href="https://deimusmeister.medium.com/jordan-amman-851170e5369a" class="underline">Amman</a>,
+                              Kerak,
+                              <a href="https://deimusmeister.medium.com/jordan-wadi-musa-d22b20b89474" class="underline">Wadi Musa</a>,
+                              Petra,
+                              <a href="https://deimusmeister.medium.com/jordan-dead-sea-1818e276043a" class="underline">Dead Sea</a>,
+                              <a href="https://deimusmeister.medium.com/jordan-madaba-a0e6acd5688b" class="underline">Madaba</a>,
+                              Jerash,
+                              As-Salt
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              Morocco:
+                              </span>
+                              Fes,
+                              Rabat,
+                              Casablanca,
+                              Marrakesh,
+                              Agadir
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              Kazakhstan:
+                              </span>
+                              Almaty
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              Kyrgyzstan:
+                              </span>
+                              Bishkek
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              Bahrain:
+                              </span>
+                              Manama
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              Australia:
+                              </span>
+                              Sydney,
+                              Menly
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              Oman:
+                              </span>
+                              Muscat
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              Saudi Arabia:
+                              </span>
+                              Riyadh,
+                              Dammam,
+                              Khober
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              Kuwait:
+                              </span>
+                              Kuwait City
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              Egypt:
+                              </span>
+                              Alexandria
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              Maldives:
+                              </span>
+                              Male,
+                              Hulumale,
+                              Villingili
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              Uzbekistan:
+                              </span>
+                              Tashkent,
+                              Samarkand
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              New Zealand:
+                              </span>
+                              Auckland
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              Qatar:
+                              </span>
+                              <a href="https://deimusmeister.blogspot.com/2023/10/doha-katar.html" class="underline">Doha</a>,
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              Tanzania:
+                              </span>
+                              Dar Es Salam,
+                              Zanzibar
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              Kenya:
+                              </span>
+                              Nairobi
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              Kosovo:
+                              </span>
+                              Prishtina
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              South Korea:
+                              </span>
+                              Seoul,
+                              Busan
+                           </p>
+                        </li>
+                        <li>
+                           <p class="body">
+                              <span class="block-country-city-header">
+                              Fiji:
+                              </span>
+                              Nadi,
+                              Sigatoka,
+                              Korovisilou,
+                              Suva
+                           </p>
+                        </li>
+                     </ol>
+                     </ol>
+                  </div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </body>
 </html>
